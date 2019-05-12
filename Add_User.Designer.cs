@@ -60,7 +60,7 @@
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(127, 9);
+            this.label1.Location = new System.Drawing.Point(500, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(478, 64);
             this.label1.TabIndex = 0;
@@ -70,6 +70,7 @@
             // 
             this.lbluserregistrationname.AutoSize = true;
             this.lbluserregistrationname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluserregistrationname.ForeColor = System.Drawing.Color.White;
             this.lbluserregistrationname.Location = new System.Drawing.Point(14, 98);
             this.lbluserregistrationname.Name = "lbluserregistrationname";
             this.lbluserregistrationname.Size = new System.Drawing.Size(82, 29);
@@ -82,6 +83,7 @@
             this.txtuserregistrationname.Name = "txtuserregistrationname";
             this.txtuserregistrationname.Size = new System.Drawing.Size(340, 26);
             this.txtuserregistrationname.TabIndex = 2;
+            this.txtuserregistrationname.TextChanged += new System.EventHandler(this.txtuserregistrationname_TextChanged);
             // 
             // lbluserregistrationlevel
             // 
@@ -100,6 +102,7 @@
             this.combolbluserregistrationlevel.Name = "combolbluserregistrationlevel";
             this.combolbluserregistrationlevel.Size = new System.Drawing.Size(340, 28);
             this.combolbluserregistrationlevel.TabIndex = 3;
+            this.combolbluserregistrationlevel.SelectedIndexChanged += new System.EventHandler(this.combolbluserregistrationlevel_SelectedIndexChanged);
             // 
             // lblregistrationusername
             // 
@@ -256,9 +259,9 @@
             // 
             this.btnuserregistrationsubmit.BackColor = System.Drawing.Color.Orange;
             this.btnuserregistrationsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnuserregistrationsubmit.Location = new System.Drawing.Point(52, 633);
+            this.btnuserregistrationsubmit.Location = new System.Drawing.Point(67, 613);
             this.btnuserregistrationsubmit.Name = "btnuserregistrationsubmit";
-            this.btnuserregistrationsubmit.Size = new System.Drawing.Size(108, 45);
+            this.btnuserregistrationsubmit.Size = new System.Drawing.Size(119, 56);
             this.btnuserregistrationsubmit.TabIndex = 5;
             this.btnuserregistrationsubmit.Text = "Submit";
             this.btnuserregistrationsubmit.UseVisualStyleBackColor = false;
@@ -268,9 +271,9 @@
             // 
             this.btnuserregistrationreset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnuserregistrationreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnuserregistrationreset.Location = new System.Drawing.Point(412, 633);
+            this.btnuserregistrationreset.Location = new System.Drawing.Point(417, 613);
             this.btnuserregistrationreset.Name = "btnuserregistrationreset";
-            this.btnuserregistrationreset.Size = new System.Drawing.Size(111, 45);
+            this.btnuserregistrationreset.Size = new System.Drawing.Size(130, 56);
             this.btnuserregistrationreset.TabIndex = 5;
             this.btnuserregistrationreset.Text = "Reset";
             this.btnuserregistrationreset.UseVisualStyleBackColor = false;

@@ -27,5 +27,17 @@ namespace Bug_Trakking_System
         {
 
         }
+        public void clearbox()
+        {
+            txtprojecttitle.Text = "";
+            comboprojecttype.Text = "";
+            comboprogramminglanguage.Text = "";
+            richtxtboxaddnewprojectdescription.Text = "";
+        }
+
+        private void btnaddprojectreset_Click(object sender, EventArgs e)
+        {
+            clearbox();
+        }
     }
 }

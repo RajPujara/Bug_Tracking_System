@@ -63,6 +63,7 @@
             this.datagridviewprojectreport.RowTemplate.Height = 28;
             this.datagridviewprojectreport.Size = new System.Drawing.Size(1493, 591);
             this.datagridviewprojectreport.TabIndex = 1;
+            this.datagridviewprojectreport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewprojectreport_CellContentClick);
             // 
             // id
             // 

@@ -38,7 +38,7 @@
             this.comboprojecttype = new System.Windows.Forms.ComboBox();
             this.comboprogramminglanguage = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richtxtboxaddnewprojectdescription = new System.Windows.Forms.RichTextBox();
             this.btnadprojectsubmit = new System.Windows.Forms.Button();
             this.btnaddprojectreset = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -155,14 +155,14 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Description";
             // 
-            // richTextBox1
+            // richtxtboxaddnewprojectdescription
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(522, 412);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(349, 96);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.richtxtboxaddnewprojectdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richtxtboxaddnewprojectdescription.Location = new System.Drawing.Point(522, 412);
+            this.richtxtboxaddnewprojectdescription.Name = "richtxtboxaddnewprojectdescription";
+            this.richtxtboxaddnewprojectdescription.Size = new System.Drawing.Size(349, 96);
+            this.richtxtboxaddnewprojectdescription.TabIndex = 5;
+            this.richtxtboxaddnewprojectdescription.Text = "";
             // 
             // btnadprojectsubmit
             // 
@@ -188,6 +188,7 @@
             this.btnaddprojectreset.TabIndex = 6;
             this.btnaddprojectreset.Text = "Reset";
             this.btnaddprojectreset.UseVisualStyleBackColor = false;
+            this.btnaddprojectreset.Click += new System.EventHandler(this.btnaddprojectreset_Click);
             // 
             // addnewproject
             // 
@@ -197,7 +198,7 @@
             this.ClientSize = new System.Drawing.Size(1458, 669);
             this.Controls.Add(this.btnaddprojectreset);
             this.Controls.Add(this.btnadprojectsubmit);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richtxtboxaddnewprojectdescription);
             this.Controls.Add(this.comboprogramminglanguage);
             this.Controls.Add(this.comboprojecttype);
             this.Controls.Add(this.label5);
@@ -228,7 +229,7 @@
         private System.Windows.Forms.ComboBox comboprojecttype;
         private System.Windows.Forms.ComboBox comboprogramminglanguage;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richtxtboxaddnewprojectdescription;
         private System.Windows.Forms.Button btnadprojectsubmit;
         private System.Windows.Forms.Button btnaddprojectreset;
     }

@@ -14,22 +14,22 @@ namespace Bug_Trakking_System
     public partial class addnewuser : Form
     {
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=***********");
+        SqlConnection sqlcon = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
 
-
+       
 
 
         public addnewuser()
         {
             InitializeComponent();
+            
         }
 
         private void Add_User_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void btnuserregistrationreset_Click(object sender, EventArgs e)
+        public void clearbox()
         {
             txtuserregistrationname.Text = "";
             combolbluserregistrationlevel.Text = "";
@@ -40,29 +40,55 @@ namespace Bug_Trakking_System
             txtuserregistrationemail.Text = "";
             txtuserregistrationdob.Text = "";
             txtuserregistrationaddress.Text = "";
+
+        }
+        private void btnuserregistrationreset_Click(object sender, EventArgs e)
+        {
+            clearbox();
         }
 
         private void btnuserregistrationsubmit_Click(object sender, EventArgs e)
         {
-            try
+            if (txtuserregistrationname.Text == "" || txtregistrationpassword.Text == "")
             {
-                conn.Open();
-                string name = txtuserregistrationname.Text.ToString();
-                string level = combolbluserregistrationlevel.SelectedItem.ToString();
-                string username = txtregistrationusername.Text.ToString();
-                string password = txtregistrationpassword.Text.ToString();
-                string conformpassword = txtregistrationconformpassword.Text.ToString();
-                string mobile = txtuserregistrationmobile.Text.ToString();
-                string email = txtuserregistrationemail.Text.ToString();
-                string dob = txtuserregistrationdob.Text.ToString();
-                string address = txtuserregistrationaddress.Text.ToString();
+                MessageBox.Show("please fill mendetory field");
             }
-                SqlCommand sc = new SqlCommand();
-            
+            else if (txtregistrationpassword.Text != txtregistrationconformpassword.Text)
+            {
+                MessageBox.Show("Passwword donot match");
+            }
+            else
+            {
+                //using (SqlConnection sqlcon = new SqlConnection(connectionString))
+               // {
+                    sqlcon.Open();
+                    SqlCommand sqlcmd = new SqlCommand("ManageUsers", sqlcon);
+                    sqlcmd.CommandType = CommandType.StoredProcedure;
+                    sqlcmd.Parameters.AddWithValue("@username",txtuserregistrationname.Text.Trim());
+                    sqlcmd.Parameters.AddWithValue("@password",txtregistrationpassword.Text.Trim());
+                    sqlcmd.Parameters.AddWithValue("@conformpassword",txtregistrationconformpassword.Text.Trim());
+                    sqlcmd.Parameters.AddWithValue("@mobile",txtuserregistrationmobile.Text.Trim());
+                    sqlcmd.Parameters.AddWithValue("@email",txtuserregistrationemail.Text.Trim());
+                    sqlcmd.Parameters.AddWithValue("@DOB",txtuserregistrationdob.Text.Trim());
+                    sqlcmd.Parameters.AddWithValue("@DOB",txtuserregistrationaddress.Text.Trim());
+                    sqlcmd.ExecuteNonQuery();
+                    MessageBox.Show("Registration is successful");
+                    clearbox();
+                //}
 
-            catch () {
             }
-}
         }
+
+        private void txtuserregistrationname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combolbluserregistrationlevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+    }
     }
 

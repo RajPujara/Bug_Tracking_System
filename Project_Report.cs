@@ -21,5 +21,10 @@ namespace Bug_Trakking_System
         {
 
         }
+
+        private void datagridviewprojectreport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

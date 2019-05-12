@@ -106,6 +106,7 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="openFileDialog1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Programming_language.cs">
       <SubType>Form</SubType>
