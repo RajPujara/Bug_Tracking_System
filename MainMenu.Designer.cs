@@ -304,7 +304,7 @@
             this.btnaddbugs.Name = "btnaddbugs";
             this.btnaddbugs.Size = new System.Drawing.Size(325, 65);
             this.btnaddbugs.TabIndex = 6;
-            this.btnaddbugs.Text = "Add Bugs";
+            this.btnaddbugs.Text = "Add New Bug";
             this.btnaddbugs.UseVisualStyleBackColor = false;
             this.btnaddbugs.Click += new System.EventHandler(this.btnaddbugs_Click);
             // 

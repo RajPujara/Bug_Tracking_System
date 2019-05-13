@@ -52,6 +52,7 @@
             this.datagridviewbugreport.RowTemplate.Height = 28;
             this.datagridviewbugreport.Size = new System.Drawing.Size(1490, 591);
             this.datagridviewbugreport.TabIndex = 1;
+            this.datagridviewbugreport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewbugreport_CellContentClick_1);
             // 
             // bugreport
             // 
