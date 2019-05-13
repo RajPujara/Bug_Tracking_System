@@ -38,6 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnchnagepassword = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -98,6 +99,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.btnchnagepassword);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -146,6 +148,18 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
+            // btnchnagepassword
+            // 
+            this.btnchnagepassword.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnchnagepassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnchnagepassword.Location = new System.Drawing.Point(196, 351);
+            this.btnchnagepassword.Name = "btnchnagepassword";
+            this.btnchnagepassword.Size = new System.Drawing.Size(257, 73);
+            this.btnchnagepassword.TabIndex = 8;
+            this.btnchnagepassword.Text = "Change Password";
+            this.btnchnagepassword.UseVisualStyleBackColor = false;
+            this.btnchnagepassword.Click += new System.EventHandler(this.btnchnagepassword_Click);
+            // 
             // loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -175,6 +189,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnchnagepassword;
     }
 }
 

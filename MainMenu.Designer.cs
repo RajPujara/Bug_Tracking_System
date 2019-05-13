@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,6 +37,8 @@
             this.addNewProjectTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programmingLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewBugTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bugSolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,8 +55,6 @@
             this.btnprojectreport = new System.Windows.Forms.Button();
             this.btnaddproject = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bugSolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,6 +137,20 @@
             this.addNewBugTypeToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
             this.addNewBugTypeToolStripMenuItem.Text = "Add New Bug Type";
             this.addNewBugTypeToolStripMenuItem.Click += new System.EventHandler(this.addNewBugTypeToolStripMenuItem_Click);
+            // 
+            // bugSolutionToolStripMenuItem
+            // 
+            this.bugSolutionToolStripMenuItem.Name = "bugSolutionToolStripMenuItem";
+            this.bugSolutionToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
+            this.bugSolutionToolStripMenuItem.Text = "Bug Solution";
+            this.bugSolutionToolStripMenuItem.Click += new System.EventHandler(this.bugSolutionToolStripMenuItem_Click);
+            // 
+            // searchFormToolStripMenuItem
+            // 
+            this.searchFormToolStripMenuItem.Name = "searchFormToolStripMenuItem";
+            this.searchFormToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
+            this.searchFormToolStripMenuItem.Text = "Search Form";
+            this.searchFormToolStripMenuItem.Click += new System.EventHandler(this.searchFormToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -322,24 +337,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(331, 179);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1162, 487);
             this.panel1.TabIndex = 10;
-            // 
-            // bugSolutionToolStripMenuItem
-            // 
-            this.bugSolutionToolStripMenuItem.Name = "bugSolutionToolStripMenuItem";
-            this.bugSolutionToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
-            this.bugSolutionToolStripMenuItem.Text = "Bug Solution";
-            this.bugSolutionToolStripMenuItem.Click += new System.EventHandler(this.bugSolutionToolStripMenuItem_Click);
-            // 
-            // searchFormToolStripMenuItem
-            // 
-            this.searchFormToolStripMenuItem.Name = "searchFormToolStripMenuItem";
-            this.searchFormToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
-            this.searchFormToolStripMenuItem.Text = "Search Form";
-            this.searchFormToolStripMenuItem.Click += new System.EventHandler(this.searchFormToolStripMenuItem_Click);
             // 
             // MainMenu
             // 

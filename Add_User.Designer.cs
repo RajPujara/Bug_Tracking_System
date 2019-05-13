@@ -54,6 +54,7 @@
             this.btnuserregistrationupdate = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnreset = new System.Windows.Forms.Button();
+            this.btnchnagepassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,9 +76,9 @@
             this.lbluserregistrationname.ForeColor = System.Drawing.Color.White;
             this.lbluserregistrationname.Location = new System.Drawing.Point(14, 98);
             this.lbluserregistrationname.Name = "lbluserregistrationname";
-            this.lbluserregistrationname.Size = new System.Drawing.Size(82, 29);
+            this.lbluserregistrationname.Size = new System.Drawing.Size(133, 29);
             this.lbluserregistrationname.TabIndex = 1;
-            this.lbluserregistrationname.Text = "Name";
+            this.lbluserregistrationname.Text = "Full Name";
             // 
             // txtuserregistrationname
             // 
@@ -100,6 +101,9 @@
             // combolbluserregistrationlevel
             // 
             this.combolbluserregistrationlevel.FormattingEnabled = true;
+            this.combolbluserregistrationlevel.Items.AddRange(new object[] {
+            "user",
+            "admin"});
             this.combolbluserregistrationlevel.Location = new System.Drawing.Point(320, 152);
             this.combolbluserregistrationlevel.Name = "combolbluserregistrationlevel";
             this.combolbluserregistrationlevel.Size = new System.Drawing.Size(340, 28);
@@ -285,7 +289,7 @@
             // 
             this.btndelete.BackColor = System.Drawing.Color.Orange;
             this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.Location = new System.Drawing.Point(680, 613);
+            this.btndelete.Location = new System.Drawing.Point(701, 613);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(119, 56);
             this.btndelete.TabIndex = 5;
@@ -305,12 +309,25 @@
             this.btnreset.UseVisualStyleBackColor = false;
             this.btnreset.Click += new System.EventHandler(this.btnuserregistrationreset_Click);
             // 
+            // btnchnagepassword
+            // 
+            this.btnchnagepassword.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnchnagepassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnchnagepassword.Location = new System.Drawing.Point(735, 265);
+            this.btnchnagepassword.Name = "btnchnagepassword";
+            this.btnchnagepassword.Size = new System.Drawing.Size(257, 73);
+            this.btnchnagepassword.TabIndex = 6;
+            this.btnchnagepassword.Text = "Change Password";
+            this.btnchnagepassword.UseVisualStyleBackColor = false;
+            this.btnchnagepassword.Click += new System.EventHandler(this.btnchnagepassword_Click);
+            // 
             // addnewuser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1493, 710);
+            this.Controls.Add(this.btnchnagepassword);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnuserregistrationupdate);
@@ -374,5 +391,6 @@
         private System.Windows.Forms.Button btnuserregistrationupdate;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnreset;
+        private System.Windows.Forms.Button btnchnagepassword;
     }
 }

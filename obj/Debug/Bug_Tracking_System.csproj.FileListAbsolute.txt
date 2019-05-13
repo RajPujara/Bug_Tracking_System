@@ -21,3 +21,8 @@ D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Tracking_System.
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.exe
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.pdb
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.SearchForm.resources
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\BusinessLogicLayer.dll
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\DataAccessLayer.dll
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\BusinessLogicLayer.pdb
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\DataAccessLayer.pdb
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Tracking_System.csproj.CopyComplete

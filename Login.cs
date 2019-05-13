@@ -58,7 +58,7 @@ namespace BugTrakkingSystem
                 MessageBox.Show("Please enter correct username or password", "alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -76,6 +76,11 @@ namespace BugTrakkingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnchnagepassword_Click(object sender, EventArgs e)
+        {
+            ChangePassword cp = new ChangePassword();
         }
     }
 }

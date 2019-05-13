@@ -18,7 +18,7 @@ namespace Bug_Trakking_System
     {
        
         
-        //SqlConnection sqlcon = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
+        SqlConnection sqlcon = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
         public addnewproject()
         {
             InitializeComponent();
@@ -32,7 +32,8 @@ namespace Bug_Trakking_System
 
         private void btnadprojectsubmit_Click(object sender, EventArgs e)
         {
-           
+            sqlcon.Open();
+            SqlCommand sqlcmd = new SqlCommand();
         }
         public void clearbox()
         {

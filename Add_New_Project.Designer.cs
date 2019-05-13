@@ -188,7 +188,7 @@
             this.btnaddprojectupdate.Name = "btnaddprojectupdate";
             this.btnaddprojectupdate.Size = new System.Drawing.Size(114, 43);
             this.btnaddprojectupdate.TabIndex = 6;
-            this.btnaddprojectupdate.Text = "Reset";
+            this.btnaddprojectupdate.Text = "Update";
             this.btnaddprojectupdate.UseVisualStyleBackColor = false;
             this.btnaddprojectupdate.Click += new System.EventHandler(this.btnaddprojectreset_Click);
             // 
@@ -240,7 +240,6 @@
             this.Controls.Add(this.lblprojecttitle);
             this.Controls.Add(this.label1);
             this.Name = "addnewproject";
-            this.Text = "Add New Project";
             this.Load += new System.EventHandler(this.addnewproject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

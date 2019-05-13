@@ -48,7 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtbugmethod = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datetime = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.txtbuglinenumber = new System.Windows.Forms.TextBox();
             this.btnbugsnapshot = new System.Windows.Forms.Button();
@@ -197,6 +197,7 @@
             this.btnresetbug.TabIndex = 7;
             this.btnresetbug.Text = "Reset";
             this.btnresetbug.UseVisualStyleBackColor = false;
+            this.btnresetbug.Click += new System.EventHandler(this.btnresetbug_Click);
             // 
             // lblbugsnapshot
             // 
@@ -254,13 +255,13 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Date";
             // 
-            // dateTimePicker1
+            // datetime
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1151, 170);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(222, 26);
-            this.dateTimePicker1.TabIndex = 10;
+            this.datetime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datetime.Location = new System.Drawing.Point(1151, 170);
+            this.datetime.Name = "datetime";
+            this.datetime.Size = new System.Drawing.Size(222, 26);
+            this.datetime.TabIndex = 10;
             // 
             // label3
             // 
@@ -335,7 +336,7 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1472, 701);
             this.Controls.Add(this.btnbugsnapshot);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.datetime);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnsavebug);
@@ -393,7 +394,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtbugmethod;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datetime;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbuglinenumber;
         private System.Windows.Forms.Button btnbugsnapshot;

@@ -28,8 +28,6 @@ namespace Bug_Trakking_System
         {
             txtaddnewbugtitle.Text = "";
             comboaddnewbugselectproject.Text = "";
-            comboaddnewbugselecttype.Text = "";
-            comboaddnewbugassignedto.Text = "";
             comboaddnewbugstatus.Text = "";
             richtextboxaddnewbugdescription.Text = "";
             txtboxclassbugsolution.Text = "";

@@ -41,16 +41,14 @@
             this.lblbugsolutioncode = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblbugsnapshot = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblsavenewbug = new System.Windows.Forms.Button();
             this.richtextboxaddnewbugdescription = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboaddnewbugstatus = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboaddnewbugassignedto = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboaddnewbugselecttype = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.comboaddnewbugselectproject = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtbugmethod = new System.Windows.Forms.TextBox();
@@ -64,8 +62,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.bugsolution.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,10 +151,6 @@
             this.bugsolution.Controls.Add(this.label1);
             this.bugsolution.Controls.Add(this.comboaddnewbugstatus);
             this.bugsolution.Controls.Add(this.label3);
-            this.bugsolution.Controls.Add(this.comboaddnewbugassignedto);
-            this.bugsolution.Controls.Add(this.label4);
-            this.bugsolution.Controls.Add(this.comboaddnewbugselecttype);
-            this.bugsolution.Controls.Add(this.label5);
             this.bugsolution.Controls.Add(this.comboaddnewbugselectproject);
             this.bugsolution.Controls.Add(this.label6);
             this.bugsolution.Controls.Add(this.txtbugmethod);
@@ -233,6 +225,31 @@
             this.lblbugsnapshot.TabIndex = 34;
             this.lblbugsnapshot.Text = "Snapshot of Solution";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Teal;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(742, 650);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(142, 52);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "Update";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(408, 660);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(174, 52);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Teal;
@@ -261,7 +278,7 @@
             // richtextboxaddnewbugdescription
             // 
             this.richtextboxaddnewbugdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richtextboxaddnewbugdescription.Location = new System.Drawing.Point(306, 465);
+            this.richtextboxaddnewbugdescription.Location = new System.Drawing.Point(306, 328);
             this.richtextboxaddnewbugdescription.Name = "richtextboxaddnewbugdescription";
             this.richtextboxaddnewbugdescription.Size = new System.Drawing.Size(238, 96);
             this.richtextboxaddnewbugdescription.TabIndex = 31;
@@ -272,7 +289,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 465);
+            this.label1.Location = new System.Drawing.Point(60, 328);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 29);
             this.label1.TabIndex = 30;
@@ -286,7 +303,7 @@
             "Pending",
             "prograssing",
             "Solved"});
-            this.comboaddnewbugstatus.Location = new System.Drawing.Point(306, 388);
+            this.comboaddnewbugstatus.Location = new System.Drawing.Point(306, 251);
             this.comboaddnewbugstatus.Name = "comboaddnewbugstatus";
             this.comboaddnewbugstatus.Size = new System.Drawing.Size(222, 34);
             this.comboaddnewbugstatus.TabIndex = 28;
@@ -296,56 +313,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(60, 388);
+            this.label3.Location = new System.Drawing.Point(60, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 29);
             this.label3.TabIndex = 25;
             this.label3.Text = "Bug Status";
             // 
-            // comboaddnewbugassignedto
-            // 
-            this.comboaddnewbugassignedto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboaddnewbugassignedto.FormattingEnabled = true;
-            this.comboaddnewbugassignedto.Location = new System.Drawing.Point(306, 326);
-            this.comboaddnewbugassignedto.Name = "comboaddnewbugassignedto";
-            this.comboaddnewbugassignedto.Size = new System.Drawing.Size(222, 34);
-            this.comboaddnewbugassignedto.TabIndex = 27;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(60, 326);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 29);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Assigned To";
-            // 
-            // comboaddnewbugselecttype
-            // 
-            this.comboaddnewbugselecttype.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboaddnewbugselecttype.FormattingEnabled = true;
-            this.comboaddnewbugselecttype.Location = new System.Drawing.Point(306, 254);
-            this.comboaddnewbugselecttype.Name = "comboaddnewbugselecttype";
-            this.comboaddnewbugselecttype.Size = new System.Drawing.Size(222, 34);
-            this.comboaddnewbugselecttype.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(60, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 29);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Select Type";
-            // 
             // comboaddnewbugselectproject
             // 
             this.comboaddnewbugselectproject.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboaddnewbugselectproject.FormattingEnabled = true;
+            this.comboaddnewbugselectproject.Items.AddRange(new object[] {
+            "student management system"});
             this.comboaddnewbugselectproject.Location = new System.Drawing.Point(306, 185);
             this.comboaddnewbugselectproject.Name = "comboaddnewbugselectproject";
             this.comboaddnewbugselectproject.Size = new System.Drawing.Size(222, 34);
@@ -465,31 +444,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(408, 660);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 52);
-            this.button4.TabIndex = 32;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Teal;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(742, 650);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 52);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Update";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Bug_Solution
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -530,10 +484,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboaddnewbugstatus;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboaddnewbugassignedto;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboaddnewbugselecttype;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboaddnewbugselectproject;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtbugmethod;

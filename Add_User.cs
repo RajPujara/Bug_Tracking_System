@@ -14,11 +14,7 @@ namespace Bug_Trakking_System
     public partial class addnewuser : Form
     {
 
-        SqlConnection sqlcon = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
-
-       
-
-
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
         public addnewuser()
         {
             InitializeComponent();
@@ -40,6 +36,7 @@ namespace Bug_Trakking_System
             txtuserregistrationemail.Text = "";
             txtuserregistrationdob.Text = "";
             txtuserregistrationaddress.Text = "";
+            txtuserregistrationname.Text = "";
 
         }
         private void btnuserregistrationreset_Click(object sender, EventArgs e)
@@ -49,33 +46,34 @@ namespace Bug_Trakking_System
 
         private void btnuserregistrationsubmit_Click(object sender, EventArgs e)
         {
+            clearbox();
             if (txtuserregistrationname.Text == "" || txtregistrationpassword.Text == "")
             {
                 MessageBox.Show("please fill mendetory field");
             }
             else if (txtregistrationpassword.Text != txtregistrationconformpassword.Text)
             {
-                MessageBox.Show("Passwword donot match");
+                MessageBox.Show("Passwword do not match");
             }
             else
             {
-                //using (SqlConnection sqlcon = new SqlConnection(connectionString))
-               // {
-                    sqlcon.Open();
-                    SqlCommand sqlcmd = new SqlCommand("ManageUsers", sqlcon);
-                    sqlcmd.CommandType = CommandType.StoredProcedure;
-                    sqlcmd.Parameters.AddWithValue("@username",txtuserregistrationname.Text.Trim());
-                    sqlcmd.Parameters.AddWithValue("@password",txtregistrationpassword.Text.Trim());
-                    sqlcmd.Parameters.AddWithValue("@conformpassword",txtregistrationconformpassword.Text.Trim());
-                    sqlcmd.Parameters.AddWithValue("@mobile",txtuserregistrationmobile.Text.Trim());
-                    sqlcmd.Parameters.AddWithValue("@email",txtuserregistrationemail.Text.Trim());
-                    sqlcmd.Parameters.AddWithValue("@DOB",txtuserregistrationdob.Text.Trim());
-                    sqlcmd.Parameters.AddWithValue("@DOB",txtuserregistrationaddress.Text.Trim());
-                    sqlcmd.ExecuteNonQuery();
-                    MessageBox.Show("Registration is successful");
-                    clearbox();
-                //}
+                SqlConnection sc = new SqlConnection();
+                SqlCommand com = new SqlCommand();
+                sc.ConnectionString = ("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
+                sc.Open();
 
+                com.Connection = sc;
+                com.CommandText = @"INSERT INTO users (username, password, user_level, mobile, email, DOB, address, full_name) VALUES (@username, @password, @user_level, @mobile, @email, @DOB, @address,@fullname)";
+                com.Parameters.AddWithValue("@username", txtregistrationusername.Text);
+                com.Parameters.AddWithValue("@password", txtregistrationpassword.Text);
+                com.Parameters.AddWithValue("@user_level", combolbluserregistrationlevel.Text);
+                com.Parameters.AddWithValue("@mobile", txtuserregistrationmobile.Text);
+                com.Parameters.AddWithValue("@email", txtuserregistrationemail.Text);
+                com.Parameters.AddWithValue("@DOB", txtuserregistrationdob.Text);
+                com.Parameters.AddWithValue("@address", txtuserregistrationaddress.Text);
+                com.Parameters.AddWithValue("@fullname", txtuserregistrationname.Text);
+                com.ExecuteNonQuery();
+                sc.Close();
             }
         }
 
@@ -88,7 +86,11 @@ namespace Bug_Trakking_System
         {
 
         }
-        
+
+        private void btnchnagepassword_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
     }
 
