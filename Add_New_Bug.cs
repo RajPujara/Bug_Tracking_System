@@ -46,6 +46,7 @@ namespace Bug_Trakking_System
             com.Connection = sc;
             com.CommandText = @"INSERT INTO bug(title,project_id,bug_type_id,assigned_to,bug_status,description,class,image_path,image_url,date,line_number,method)";
             com.Parameters.AddWithValue("@title", txtaddnewbugtitle.Text);
+            com.Parameters.AddWithValue("@project_id", txtaddnewbugtitle.Text);
         }
 
         private void btnresetbug_Click(object sender, EventArgs e)
