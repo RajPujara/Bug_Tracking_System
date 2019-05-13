@@ -16,5 +16,10 @@ namespace Bug_Trakking_System
         {
             InitializeComponent();
         }
+
+        private void datagridviewuserreport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

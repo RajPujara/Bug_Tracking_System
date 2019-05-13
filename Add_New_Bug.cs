@@ -31,7 +31,7 @@ namespace Bug_Trakking_System
             comboaddnewbugassignedto.Text = "";
             comboaddnewbugstatus.Text = "";
             richtextboxaddnewbugdescription.Text = "";
-            datetime.Text = "";
+            txtbugclass.Text = "";
             txtbuglinenumber.Text = "";
             txtbugmethod.Text = "";
 
@@ -39,11 +39,13 @@ namespace Bug_Trakking_System
 
         private void btnsavebug_Click(object sender, EventArgs e)
         {
-            sqlcon.Open();
-            SqlCommand sqlcmd = new SqlCommand("Managebugs", sqlcon);
-            sqlcmd.CommandType = CommandType.StoredProcedure;
-            sqlcmd.Parameters.AddWithValue("@title", txtaddnewbugtitle.Text.Trim());
-            
+            SqlConnection sc = new SqlConnection();
+            SqlCommand com = new SqlCommand();
+            sc.ConnectionString = ("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
+            sc.Open();
+            com.Connection = sc;
+            com.CommandText = @"INSERT INTO bug(title,project_id,bug_type_id,assigned_to,bug_status,description,class,image_path,image_url,date,line_number,method)";
+            com.Parameters.AddWithValue("@title", txtaddnewbugtitle.Text);
         }
 
         private void btnresetbug_Click(object sender, EventArgs e)
