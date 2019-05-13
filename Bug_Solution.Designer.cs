@@ -64,6 +64,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.bugsolution.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,6 +147,8 @@
             this.bugsolution.Controls.Add(this.lblbugsolutioncode);
             this.bugsolution.Controls.Add(this.dateTimePicker1);
             this.bugsolution.Controls.Add(this.lblbugsnapshot);
+            this.bugsolution.Controls.Add(this.button5);
+            this.bugsolution.Controls.Add(this.button4);
             this.bugsolution.Controls.Add(this.button1);
             this.bugsolution.Controls.Add(this.lblsavenewbug);
             this.bugsolution.Controls.Add(this.richtextboxaddnewbugdescription);
@@ -234,7 +238,7 @@
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(950, 660);
+            this.button1.Location = new System.Drawing.Point(1117, 650);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 52);
             this.button1.TabIndex = 33;
@@ -247,7 +251,7 @@
             this.lblsavenewbug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblsavenewbug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsavenewbug.ForeColor = System.Drawing.Color.White;
-            this.lblsavenewbug.Location = new System.Drawing.Point(670, 660);
+            this.lblsavenewbug.Location = new System.Drawing.Point(65, 660);
             this.lblsavenewbug.Name = "lblsavenewbug";
             this.lblsavenewbug.Size = new System.Drawing.Size(174, 52);
             this.lblsavenewbug.TabIndex = 32;
@@ -399,9 +403,9 @@
             // txtboxclassbugsolution
             // 
             this.txtboxclassbugsolution.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxclassbugsolution.Location = new System.Drawing.Point(306, 635);
+            this.txtboxclassbugsolution.Location = new System.Drawing.Point(1235, 386);
             this.txtboxclassbugsolution.Name = "txtboxclassbugsolution";
-            this.txtboxclassbugsolution.Size = new System.Drawing.Size(222, 32);
+            this.txtboxclassbugsolution.Size = new System.Drawing.Size(206, 32);
             this.txtboxclassbugsolution.TabIndex = 19;
             // 
             // label9
@@ -420,7 +424,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(60, 635);
+            this.label10.Location = new System.Drawing.Point(1058, 387);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 29);
             this.label10.TabIndex = 13;
@@ -460,6 +464,31 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(408, 660);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(174, 52);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Teal;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(742, 650);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(142, 52);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "Update";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button1_Click);
             // 
             // Bug_Solution
             // 
@@ -521,5 +550,7 @@
         private System.Windows.Forms.Button btnsnapshotofsolutioncode;
         private System.Windows.Forms.Button btnsolutionsnapshot;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }

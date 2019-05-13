@@ -200,5 +200,15 @@
   <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{f21f3ee8-b335-4aa2-b102-c0923e820370}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{a1611ef9-00e7-4620-8edf-b0149b91a901}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

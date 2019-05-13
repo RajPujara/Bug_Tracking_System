@@ -53,6 +53,8 @@
             this.txtbuglinenumber = new System.Windows.Forms.TextBox();
             this.btnbugsnapshot = new System.Windows.Forms.Button();
             this.btnsavebug = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -189,7 +191,7 @@
             this.btnresetbug.BackColor = System.Drawing.Color.Teal;
             this.btnresetbug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetbug.ForeColor = System.Drawing.Color.White;
-            this.btnresetbug.Location = new System.Drawing.Point(967, 624);
+            this.btnresetbug.Location = new System.Drawing.Point(1123, 624);
             this.btnresetbug.Name = "btnresetbug";
             this.btnresetbug.Size = new System.Drawing.Size(120, 53);
             this.btnresetbug.TabIndex = 7;
@@ -210,7 +212,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 617);
+            this.label2.Location = new System.Drawing.Point(962, 404);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 1;
@@ -219,7 +221,7 @@
             // txtbugclass
             // 
             this.txtbugclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbugclass.Location = new System.Drawing.Point(278, 617);
+            this.txtbugclass.Location = new System.Drawing.Point(1151, 386);
             this.txtbugclass.Name = "txtbugclass";
             this.txtbugclass.Size = new System.Drawing.Size(222, 32);
             this.txtbugclass.TabIndex = 2;
@@ -292,12 +294,39 @@
             this.btnsavebug.BackColor = System.Drawing.Color.Orange;
             this.btnsavebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsavebug.ForeColor = System.Drawing.Color.White;
-            this.btnsavebug.Location = new System.Drawing.Point(665, 624);
+            this.btnsavebug.Location = new System.Drawing.Point(99, 624);
             this.btnsavebug.Name = "btnsavebug";
             this.btnsavebug.Size = new System.Drawing.Size(181, 53);
             this.btnsavebug.TabIndex = 7;
             this.btnsavebug.Text = "SaveBug";
             this.btnsavebug.UseVisualStyleBackColor = false;
+            this.btnsavebug.Click += new System.EventHandler(this.btnsavebug_Click);
+            // 
+            // btnupdate
+            // 
+            this.btnupdate.BackColor = System.Drawing.Color.Orange;
+            this.btnupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.ForeColor = System.Drawing.Color.White;
+            this.btnupdate.Location = new System.Drawing.Point(368, 624);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(181, 53);
+            this.btnupdate.TabIndex = 7;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnsavebug_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.BackColor = System.Drawing.Color.Orange;
+            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.ForeColor = System.Drawing.Color.White;
+            this.btndelete.Location = new System.Drawing.Point(715, 624);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(181, 53);
+            this.btndelete.TabIndex = 7;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btnsavebug_Click);
             // 
             // addnewbug
             // 
@@ -307,6 +336,8 @@
             this.ClientSize = new System.Drawing.Size(1472, 701);
             this.Controls.Add(this.btnbugsnapshot);
             this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnsavebug);
             this.Controls.Add(this.lblbugsnapshot);
             this.Controls.Add(this.btnresetbug);
@@ -367,5 +398,7 @@
         private System.Windows.Forms.TextBox txtbuglinenumber;
         private System.Windows.Forms.Button btnbugsnapshot;
         private System.Windows.Forms.Button btnsavebug;
+        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Button btndelete;
     }
 }

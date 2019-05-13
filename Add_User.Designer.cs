@@ -51,7 +51,9 @@
             this.lbluserregistrationaddress = new System.Windows.Forms.Label();
             this.txtuserregistrationaddress = new System.Windows.Forms.TextBox();
             this.btnuserregistrationsubmit = new System.Windows.Forms.Button();
-            this.btnuserregistrationreset = new System.Windows.Forms.Button();
+            this.btnuserregistrationupdate = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnreset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -267,17 +269,41 @@
             this.btnuserregistrationsubmit.UseVisualStyleBackColor = false;
             this.btnuserregistrationsubmit.Click += new System.EventHandler(this.btnuserregistrationsubmit_Click);
             // 
-            // btnuserregistrationreset
+            // btnuserregistrationupdate
             // 
-            this.btnuserregistrationreset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnuserregistrationreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnuserregistrationreset.Location = new System.Drawing.Point(417, 613);
-            this.btnuserregistrationreset.Name = "btnuserregistrationreset";
-            this.btnuserregistrationreset.Size = new System.Drawing.Size(130, 56);
-            this.btnuserregistrationreset.TabIndex = 5;
-            this.btnuserregistrationreset.Text = "Reset";
-            this.btnuserregistrationreset.UseVisualStyleBackColor = false;
-            this.btnuserregistrationreset.Click += new System.EventHandler(this.btnuserregistrationreset_Click);
+            this.btnuserregistrationupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnuserregistrationupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnuserregistrationupdate.Location = new System.Drawing.Point(417, 613);
+            this.btnuserregistrationupdate.Name = "btnuserregistrationupdate";
+            this.btnuserregistrationupdate.Size = new System.Drawing.Size(130, 56);
+            this.btnuserregistrationupdate.TabIndex = 5;
+            this.btnuserregistrationupdate.Text = "Update";
+            this.btnuserregistrationupdate.UseVisualStyleBackColor = false;
+            this.btnuserregistrationupdate.Click += new System.EventHandler(this.btnuserregistrationreset_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.BackColor = System.Drawing.Color.Orange;
+            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.Location = new System.Drawing.Point(680, 613);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(119, 56);
+            this.btndelete.TabIndex = 5;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btnuserregistrationsubmit_Click);
+            // 
+            // btnreset
+            // 
+            this.btnreset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreset.Location = new System.Drawing.Point(1030, 613);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(130, 56);
+            this.btnreset.TabIndex = 5;
+            this.btnreset.Text = "Reset";
+            this.btnreset.UseVisualStyleBackColor = false;
+            this.btnreset.Click += new System.EventHandler(this.btnuserregistrationreset_Click);
             // 
             // addnewuser
             // 
@@ -285,7 +311,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1493, 710);
-            this.Controls.Add(this.btnuserregistrationreset);
+            this.Controls.Add(this.btnreset);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btnuserregistrationupdate);
             this.Controls.Add(this.btnuserregistrationsubmit);
             this.Controls.Add(this.combolbluserregistrationlevel);
             this.Controls.Add(this.txtuserregistrationaddress);
@@ -343,6 +371,8 @@
         private System.Windows.Forms.Label lbluserregistrationaddress;
         private System.Windows.Forms.TextBox txtuserregistrationaddress;
         private System.Windows.Forms.Button btnuserregistrationsubmit;
-        private System.Windows.Forms.Button btnuserregistrationreset;
+        private System.Windows.Forms.Button btnuserregistrationupdate;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnreset;
     }
 }
