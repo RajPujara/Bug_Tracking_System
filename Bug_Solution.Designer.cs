@@ -36,13 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbladdnewbugtitle = new System.Windows.Forms.Label();
             this.bugsolution = new System.Windows.Forms.Panel();
-            this.btnsnapshotofsolutioncode = new System.Windows.Forms.Button();
             this.btnsolutionsnapshot = new System.Windows.Forms.Button();
-            this.lblbugsolutioncode = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblbugsnapshot = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblsavenewbug = new System.Windows.Forms.Button();
             this.richtextboxaddnewbugdescription = new System.Windows.Forms.RichTextBox();
@@ -62,7 +58,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bugsolution.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbladdnewbugdescription
@@ -138,13 +136,10 @@
             // bugsolution
             // 
             this.bugsolution.BackColor = System.Drawing.Color.Teal;
-            this.bugsolution.Controls.Add(this.btnsnapshotofsolutioncode);
+            this.bugsolution.Controls.Add(this.pictureBox1);
             this.bugsolution.Controls.Add(this.btnsolutionsnapshot);
-            this.bugsolution.Controls.Add(this.lblbugsolutioncode);
             this.bugsolution.Controls.Add(this.dateTimePicker1);
             this.bugsolution.Controls.Add(this.lblbugsnapshot);
-            this.bugsolution.Controls.Add(this.button5);
-            this.bugsolution.Controls.Add(this.button4);
             this.bugsolution.Controls.Add(this.button1);
             this.bugsolution.Controls.Add(this.lblsavenewbug);
             this.bugsolution.Controls.Add(this.richtextboxaddnewbugdescription);
@@ -169,42 +164,18 @@
             this.bugsolution.Size = new System.Drawing.Size(1493, 731);
             this.bugsolution.TabIndex = 31;
             // 
-            // btnsnapshotofsolutioncode
-            // 
-            this.btnsnapshotofsolutioncode.BackColor = System.Drawing.Color.Teal;
-            this.btnsnapshotofsolutioncode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsnapshotofsolutioncode.ForeColor = System.Drawing.Color.White;
-            this.btnsnapshotofsolutioncode.Location = new System.Drawing.Point(687, 480);
-            this.btnsnapshotofsolutioncode.Name = "btnsnapshotofsolutioncode";
-            this.btnsnapshotofsolutioncode.Size = new System.Drawing.Size(149, 56);
-            this.btnsnapshotofsolutioncode.TabIndex = 40;
-            this.btnsnapshotofsolutioncode.Text = "Attach";
-            this.btnsnapshotofsolutioncode.UseVisualStyleBackColor = false;
-            this.btnsnapshotofsolutioncode.Click += new System.EventHandler(this.btnsnapshotofsolutioncode_Click);
-            // 
             // btnsolutionsnapshot
             // 
             this.btnsolutionsnapshot.BackColor = System.Drawing.Color.Teal;
             this.btnsolutionsnapshot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsolutionsnapshot.ForeColor = System.Drawing.Color.White;
-            this.btnsolutionsnapshot.Location = new System.Drawing.Point(670, 188);
+            this.btnsolutionsnapshot.Location = new System.Drawing.Point(687, 304);
             this.btnsolutionsnapshot.Name = "btnsolutionsnapshot";
             this.btnsolutionsnapshot.Size = new System.Drawing.Size(149, 56);
             this.btnsolutionsnapshot.TabIndex = 39;
             this.btnsolutionsnapshot.Text = "Attach";
             this.btnsolutionsnapshot.UseVisualStyleBackColor = false;
             this.btnsolutionsnapshot.Click += new System.EventHandler(this.btnsolutionsnapshot_Click);
-            // 
-            // lblbugsolutioncode
-            // 
-            this.lblbugsolutioncode.AutoSize = true;
-            this.lblbugsolutioncode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbugsolutioncode.ForeColor = System.Drawing.Color.White;
-            this.lblbugsolutioncode.Location = new System.Drawing.Point(682, 388);
-            this.lblbugsolutioncode.Name = "lblbugsolutioncode";
-            this.lblbugsolutioncode.Size = new System.Drawing.Size(324, 29);
-            this.lblbugsolutioncode.TabIndex = 37;
-            this.lblbugsolutioncode.Text = "Snapshot of Solution Code";
             // 
             // dateTimePicker1
             // 
@@ -225,37 +196,12 @@
             this.lblbugsnapshot.TabIndex = 34;
             this.lblbugsnapshot.Text = "Snapshot of Solution";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Teal;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(742, 650);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 52);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Update";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(408, 660);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 52);
-            this.button4.TabIndex = 32;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1117, 650);
+            this.button1.Location = new System.Drawing.Point(874, 650);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 52);
             this.button1.TabIndex = 33;
@@ -268,12 +214,13 @@
             this.lblsavenewbug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblsavenewbug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsavenewbug.ForeColor = System.Drawing.Color.White;
-            this.lblsavenewbug.Location = new System.Drawing.Point(65, 660);
+            this.lblsavenewbug.Location = new System.Drawing.Point(213, 650);
             this.lblsavenewbug.Name = "lblsavenewbug";
             this.lblsavenewbug.Size = new System.Drawing.Size(174, 52);
             this.lblsavenewbug.TabIndex = 32;
             this.lblsavenewbug.Text = "Save Bug";
             this.lblsavenewbug.UseVisualStyleBackColor = false;
+            this.lblsavenewbug.Click += new System.EventHandler(this.lblsavenewbug_Click);
             // 
             // richtextboxaddnewbugdescription
             // 
@@ -444,6 +391,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(669, 166);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(238, 132);
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
             // Bug_Solution
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -462,6 +417,7 @@
             this.Text = "Bug_Solution";
             this.bugsolution.ResumeLayout(false);
             this.bugsolution.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,11 +452,8 @@
         private System.Windows.Forms.TextBox txtaddnewbugtitle;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblbugsolutioncode;
-        private System.Windows.Forms.Button btnsnapshotofsolutioncode;
         private System.Windows.Forms.Button btnsolutionsnapshot;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

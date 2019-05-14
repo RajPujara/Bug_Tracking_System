@@ -53,8 +53,8 @@
             this.txtbuglinenumber = new System.Windows.Forms.TextBox();
             this.btnbugsnapshot = new System.Windows.Forms.Button();
             this.btnsavebug = new System.Windows.Forms.Button();
-            this.btnupdate = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -191,7 +191,7 @@
             this.btnresetbug.BackColor = System.Drawing.Color.Teal;
             this.btnresetbug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetbug.ForeColor = System.Drawing.Color.White;
-            this.btnresetbug.Location = new System.Drawing.Point(1123, 624);
+            this.btnresetbug.Location = new System.Drawing.Point(891, 610);
             this.btnresetbug.Name = "btnresetbug";
             this.btnresetbug.Size = new System.Drawing.Size(120, 53);
             this.btnresetbug.TabIndex = 7;
@@ -283,19 +283,20 @@
             // 
             // btnbugsnapshot
             // 
-            this.btnbugsnapshot.Location = new System.Drawing.Point(642, 167);
+            this.btnbugsnapshot.Location = new System.Drawing.Point(659, 321);
             this.btnbugsnapshot.Name = "btnbugsnapshot";
             this.btnbugsnapshot.Size = new System.Drawing.Size(143, 56);
             this.btnbugsnapshot.TabIndex = 11;
             this.btnbugsnapshot.Text = "Attach";
             this.btnbugsnapshot.UseVisualStyleBackColor = true;
+            this.btnbugsnapshot.Click += new System.EventHandler(this.btnbugsnapshot_Click);
             // 
             // btnsavebug
             // 
             this.btnsavebug.BackColor = System.Drawing.Color.Orange;
             this.btnsavebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsavebug.ForeColor = System.Drawing.Color.White;
-            this.btnsavebug.Location = new System.Drawing.Point(99, 624);
+            this.btnsavebug.Location = new System.Drawing.Point(356, 610);
             this.btnsavebug.Name = "btnsavebug";
             this.btnsavebug.Size = new System.Drawing.Size(181, 53);
             this.btnsavebug.TabIndex = 7;
@@ -303,31 +304,13 @@
             this.btnsavebug.UseVisualStyleBackColor = false;
             this.btnsavebug.Click += new System.EventHandler(this.btnsavebug_Click);
             // 
-            // btnupdate
+            // pictureBox1
             // 
-            this.btnupdate.BackColor = System.Drawing.Color.Orange;
-            this.btnupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdate.ForeColor = System.Drawing.Color.White;
-            this.btnupdate.Location = new System.Drawing.Point(368, 624);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(181, 53);
-            this.btnupdate.TabIndex = 7;
-            this.btnupdate.Text = "Update";
-            this.btnupdate.UseVisualStyleBackColor = false;
-            this.btnupdate.Click += new System.EventHandler(this.btnsavebug_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.BackColor = System.Drawing.Color.Orange;
-            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.ForeColor = System.Drawing.Color.White;
-            this.btndelete.Location = new System.Drawing.Point(715, 624);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(181, 53);
-            this.btndelete.TabIndex = 7;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = false;
-            this.btndelete.Click += new System.EventHandler(this.btnsavebug_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(622, 155);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(218, 139);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // addnewbug
             // 
@@ -335,10 +318,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1472, 701);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnbugsnapshot);
             this.Controls.Add(this.datetime);
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnsavebug);
             this.Controls.Add(this.lblbugsnapshot);
             this.Controls.Add(this.btnresetbug);
@@ -367,6 +349,7 @@
             this.Name = "addnewbug";
             this.Text = "Add New Bug";
             this.Load += new System.EventHandler(this.addnewbug_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,7 +382,6 @@
         private System.Windows.Forms.TextBox txtbuglinenumber;
         private System.Windows.Forms.Button btnbugsnapshot;
         private System.Windows.Forms.Button btnsavebug;
-        private System.Windows.Forms.Button btnupdate;
-        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

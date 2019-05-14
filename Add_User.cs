@@ -46,7 +46,7 @@ namespace Bug_Trakking_System
 
         private void btnuserregistrationsubmit_Click(object sender, EventArgs e)
         {
-            clearbox();
+            //clearbox();
             if (txtuserregistrationname.Text == "" || txtregistrationpassword.Text == "")
             {
                 MessageBox.Show("please fill mendetory field");

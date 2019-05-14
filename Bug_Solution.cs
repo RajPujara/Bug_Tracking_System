@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +34,7 @@ namespace Bug_Trakking_System
             richtextboxaddnewbugdescription.Text = "";
             txtboxclassbugsolution.Text = "";
             btnsolutionsnapshot.Text = "";
-            btnsnapshotofsolutioncode.Text = "";
+            
             txtbuglinenumber.Text = "";
             txtbuglinenumber.Text = "";
         }
@@ -72,13 +74,22 @@ namespace Bug_Trakking_System
                     {
                         fileName = openDialog.FileName;
                         btnsolutionsnapshot.Text = fileName;
-                        lblbugsolutioncode.Image = Image.FromFile(fileName);
+                        
                     }
                 }
                 {
 
                 }
             }
+        }
+
+        private void lblsavenewbug_Click(object sender, EventArgs e)
+        {
+            MemoryStream ms = new MemoryStream();
+            pictureBox1.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] photo = new byte[ms.Length];
+            ms.Position = 0;
+            ms.Read(photo, 0, photo.Length);
         }
     }
 }
