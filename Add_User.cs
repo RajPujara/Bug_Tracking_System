@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DataAccessLayer;
+using System.Text.RegularExpressions;
 
 namespace Bug_Trakking_System
 {
     public partial class addnewuser : Form
     {
+        UserClass uc = new UserClass();
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
         public addnewuser()
@@ -55,25 +58,35 @@ namespace Bug_Trakking_System
             {
                 MessageBox.Show("Passwword do not match");
             }
-            else
+            else 
             {
-                SqlConnection sc = new SqlConnection();
-                SqlCommand com = new SqlCommand();
-                sc.ConnectionString = ("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
-                sc.Open();
+                int r = uc.manageusers(0, txtregistrationusername.Text, txtregistrationpassword.Text, combolbluserregistrationlevel.Text, txtuserregistrationmobile.Text, txtuserregistrationemail.Text
+                    , txtuserregistrationdob.Text, txtuserregistrationaddress.Text,DateTime.Now.ToString(),txtuserregistrationname.Text,DateTime.Now.ToString(),1);
+                if (r>=1)
+                {
+                    MessageBox.Show("User Added Successfully");
+                }
+                else
+                {   
+                    MessageBox.Show("Fail");
+                }
+                //SqlConnection sc = new SqlConnection();
+                //SqlCommand com = new SqlCommand();
+                //sc.ConnectionString = ("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
+                //sc.Open();
 
-                com.Connection = sc;
-                com.CommandText = @"INSERT INTO users (username, password, user_level, mobile, email, DOB, address, full_name) VALUES (@username, @password, @user_level, @mobile, @email, @DOB, @address,@fullname)";
-                com.Parameters.AddWithValue("@username", txtregistrationusername.Text);
-                com.Parameters.AddWithValue("@password", txtregistrationpassword.Text);
-                com.Parameters.AddWithValue("@user_level", combolbluserregistrationlevel.Text);
-                com.Parameters.AddWithValue("@mobile", txtuserregistrationmobile.Text);
-                com.Parameters.AddWithValue("@email", txtuserregistrationemail.Text);
-                com.Parameters.AddWithValue("@DOB", txtuserregistrationdob.Text);
-                com.Parameters.AddWithValue("@address", txtuserregistrationaddress.Text);
-                com.Parameters.AddWithValue("@fullname", txtuserregistrationname.Text);
-                com.ExecuteNonQuery();
-                sc.Close();
+                //com.Connection = sc;
+                //com.CommandText = @"INSERT INTO users (username, password, user_level, mobile, email, DOB, address, full_name) VALUES (@username, @password, @user_level, @mobile, @email, @DOB, @address,@fullname)";
+                //com.Parameters.AddWithValue("@username", txtregistrationusername.Text);
+                //com.Parameters.AddWithValue("@password", txtregistrationpassword.Text);
+                //com.Parameters.AddWithValue("@user_level", combolbluserregistrationlevel.Text);
+                //com.Parameters.AddWithValue("@mobile", txtuserregistrationmobile.Text);
+                //com.Parameters.AddWithValue("@email", txtuserregistrationemail.Text);
+                //com.Parameters.AddWithValue("@DOB", txtuserregistrationdob.Text);
+                //com.Parameters.AddWithValue("@address", txtuserregistrationaddress.Text);
+                //com.Parameters.AddWithValue("@fullname", txtuserregistrationname.Text);
+                //com.ExecuteNonQuery();
+                //sc.Close();
             }
         }
 
@@ -90,6 +103,19 @@ namespace Bug_Trakking_System
         private void btnchnagepassword_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtuserregistrationemail_TextChanged(object sender, EventArgs e)
+        {
+
+
+            Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+            bool isValid = regex.IsMatch(txtuserregistrationemail.Text.Trim());
+            if (!isValid)
+            {
+                MessageBox.Show("Invalid Email.");
+            }
+
         }
     }
     }

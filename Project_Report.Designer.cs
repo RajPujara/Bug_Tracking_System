@@ -30,11 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.datagridviewprojectreport = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewprojectreport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,47 +43,17 @@
             this.label1.Size = new System.Drawing.Size(400, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "Project Report";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // datagridviewprojectreport
             // 
             this.datagridviewprojectreport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridviewprojectreport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.datagridviewprojectreport.Location = new System.Drawing.Point(-1, 76);
             this.datagridviewprojectreport.Name = "datagridviewprojectreport";
             this.datagridviewprojectreport.RowTemplate.Height = 28;
             this.datagridviewprojectreport.Size = new System.Drawing.Size(1493, 591);
             this.datagridviewprojectreport.TabIndex = 1;
             this.datagridviewprojectreport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewprojectreport_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "project_title";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "project_type_id";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "programming_language_id";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "description";
-            this.Column5.Name = "Column5";
             // 
             // projectreport
             // 
@@ -112,10 +77,5 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView datagridviewprojectreport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

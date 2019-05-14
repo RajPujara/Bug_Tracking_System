@@ -46,14 +46,13 @@ namespace Bug_Trakking_System
             byte[] photo = new byte[ms.Length];
             ms.Position = 0;
             ms.Read(photo, 0, photo.Length);
-            SqlConnection sc = new SqlConnection();
-            SqlCommand com = new SqlCommand();
-            sc.ConnectionString = ("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
-            sc.Open();
-            com.Connection = sc;
-            com.CommandText = @"INSERT INTO bug (title,assigned_to,bug_status,description,class,image,date,line_number,method) VALUES (@title,@assigned_to,@bug_status,@description,@class,@image,@date,@line_number,@method)";
+            SqlConnection sc = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
+            SqlCommand com = new SqlCommand("INSERT INTO bug (title,assigned_to,bug_status,description,class,image,date,line_number,method) VALUES (@title,@assigned_to,@bug_status,@description,@class,@image,@date,@line_number,@method)",sc);
+            com.CommandType = CommandType.Text;
             com.Parameters.AddWithValue("@title", txtaddnewbugtitle.Text);
-            com.Parameters.AddWithValue("@assigned_to", comboaddnewbugassignedto.Text);
+            com.Parameters.AddWithValue("@project_id", Int32.Parse(comboaddnewbugselectproject.SelectedValue.ToString()));
+            com.Parameters.AddWithValue("bug_type_id", Int32.Parse(comboaddnewbugselecttype.SelectedValue.ToString()));
+            com.Parameters.AddWithValue("@assigned_to", Convert.ToInt32(comboaddnewbugassignedto.Text));
             com.Parameters.AddWithValue("@bug_status", comboaddnewbugstatus.Text);
             com.Parameters.AddWithValue("@description", richtextboxaddnewbugdescription.Text);
             com.Parameters.AddWithValue("@class", txtbugclass.Text);
@@ -61,6 +60,19 @@ namespace Bug_Trakking_System
             com.Parameters.AddWithValue("@date", datetime.Text);
             com.Parameters.AddWithValue("@line_number", txtbuglinenumber.Text);
             com.Parameters.AddWithValue("@method", txtbugmethod.Text);
+            sc.Open();
+            int res = com.ExecuteNonQuery();
+            sc.Close();
+            if (res>=1)
+            {
+                MessageBox.Show("Hait balla balla vayo");
+            }
+            else
+            {
+                MessageBox.Show("I quit");
+            }
+            
+            
 
 
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.datagridviewbugreport = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewbugreport)).BeginInit();
@@ -46,6 +47,11 @@
             // 
             // datagridviewbugreport
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
+            this.datagridviewbugreport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.datagridviewbugreport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridviewbugreport.Location = new System.Drawing.Point(2, 76);
             this.datagridviewbugreport.Name = "datagridviewbugreport";

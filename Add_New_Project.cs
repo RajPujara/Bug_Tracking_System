@@ -16,8 +16,8 @@ namespace Bug_Trakking_System
 {
     public partial class addnewproject : Form
     {
-       
-        
+
+        Manageproject mp = new Manageproject();
         SqlConnection sqlcon = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
         public addnewproject()
         {
@@ -32,8 +32,26 @@ namespace Bug_Trakking_System
 
         private void btnadprojectsubmit_Click(object sender, EventArgs e)
         {
-            sqlcon.Open();
-            SqlCommand sqlcmd = new SqlCommand();
+            int r = mp.Manageproject(0, txtprojecttitle.Text, comboprojecttype.Text, comboprogramminglanguage.Text, richtxtboxaddnewprojectdescription.Text, DateTime.Now.ToString(), DateTime.Now.ToString(), 1);
+            if (r >= 1)
+            {
+                MessageBox.Show("project Added Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Fail");
+            }
+
+
+
+            //SqlConnection sc = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
+            //SqlCommand com = new SqlCommand("INSERT INTO project (project_title,project_type_id,programming_language_id,description,created_at,updated_at) VALUES (@project_title,@project_type_id,@programming_language_id,@description,@created_at,@updated_at)", sc);
+            //com.CommandType = CommandType.Text;
+            //com.Parameters.AddWithValue("@project_title", txtprojecttitle.Text);
+            //com.Parameters.AddWithValue("@project_type_id", Int32.Parse(comboprojecttype.SelectedValue.ToString()));
+            //com.Parameters.AddWithValue("programming_language_id", Int32.Parse(comboprogramminglanguage.SelectedValue.ToString()));
+            //com.Parameters.AddWithValue("@description", richtxtboxaddnewprojectdescription.Text);
+            clearbox();
         }
         public void clearbox()
         {
@@ -47,5 +65,13 @@ namespace Bug_Trakking_System
         {
             clearbox();
         }
+    }
+
+    internal class Manageproject
+    {
+    }
+
+    internal class manageproject
+    {
     }
 }
