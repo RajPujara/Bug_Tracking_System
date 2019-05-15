@@ -17,7 +17,7 @@ namespace Bug_Trakking_System
     public partial class addnewproject : Form
     {
 
-        Manageproject mp = new Manageproject();
+        ProjectClass mp = new ProjectClass();
         SqlConnection sqlcon = new SqlConnection("Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;User ID=sa;Password=passion_10");
         public addnewproject()
         {
@@ -32,7 +32,7 @@ namespace Bug_Trakking_System
 
         private void btnadprojectsubmit_Click(object sender, EventArgs e)
         {
-            int r = mp.Manageproject(0, txtprojecttitle.Text, comboprojecttype.Text, comboprogramminglanguage.Text, richtxtboxaddnewprojectdescription.Text, DateTime.Now.ToString(), DateTime.Now.ToString(), 1);
+            int r = mp.manageprojects(0, txtprojecttitle.Text, Int32.Parse(comboprojecttype.Text), Int32.Parse(comboprogramminglanguage.Text), richtxtboxaddnewprojectdescription.Text, DateTime.Now.ToString(), DateTime.Now.ToString(), 1);
             if (r >= 1)
             {
                 MessageBox.Show("project Added Successfully");

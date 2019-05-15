@@ -60,15 +60,22 @@ namespace Bug_Trakking_System
             }
             else 
             {
-                int r = uc.manageusers(0, txtregistrationusername.Text, txtregistrationpassword.Text, combolbluserregistrationlevel.Text, txtuserregistrationmobile.Text, txtuserregistrationemail.Text
-                    , txtuserregistrationdob.Text, txtuserregistrationaddress.Text,DateTime.Now.ToString(),txtuserregistrationname.Text,DateTime.Now.ToString(),1);
-                if (r>=1)
+                if (!isemailvalid())
                 {
-                    MessageBox.Show("User Added Successfully");
+                    MessageBox.Show("Error");
                 }
                 else
-                {   
-                    MessageBox.Show("Fail");
+                {
+                    int r = uc.manageusers(0, txtregistrationusername.Text, txtregistrationpassword.Text, combolbluserregistrationlevel.Text, txtuserregistrationmobile.Text, txtuserregistrationemail.Text
+                        , txtuserregistrationdob.Text, txtuserregistrationaddress.Text, DateTime.Now.ToString(), txtuserregistrationname.Text, DateTime.Now.ToString(), 1);
+                    if (r >= 1)
+                    {
+                        MessageBox.Show("User Added Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fail");
+                    }
                 }
                 //SqlConnection sc = new SqlConnection();
                 //SqlCommand com = new SqlCommand();
@@ -107,15 +114,15 @@ namespace Bug_Trakking_System
 
         private void txtuserregistrationemail_TextChanged(object sender, EventArgs e)
         {
+            
 
+        }
 
+        public bool isemailvalid()
+        {
             Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
             bool isValid = regex.IsMatch(txtuserregistrationemail.Text.Trim());
-            if (!isValid)
-            {
-                MessageBox.Show("Invalid Email.");
-            }
-
+            return isValid;
         }
     }
     }
