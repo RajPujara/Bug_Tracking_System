@@ -43,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbluserregistrationmobile = new System.Windows.Forms.Label();
             this.txtuserregistrationmobile = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbluserregistrationemail = new System.Windows.Forms.Label();
             this.txtuserregistrationemail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +51,7 @@
             this.lbluserregistrationaddress = new System.Windows.Forms.Label();
             this.txtuserregistrationaddress = new System.Windows.Forms.TextBox();
             this.btnsubmit = new System.Windows.Forms.Button();
-            this.btnupdate = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnreset = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -104,8 +103,9 @@
             // 
             this.combolbluserregistrationlevel.FormattingEnabled = true;
             this.combolbluserregistrationlevel.Items.AddRange(new object[] {
-            "user",
-            "admin"});
+            "admin",
+            "tester",
+            "developer"});
             this.combolbluserregistrationlevel.Location = new System.Drawing.Point(334, 152);
             this.combolbluserregistrationlevel.Name = "combolbluserregistrationlevel";
             this.combolbluserregistrationlevel.Size = new System.Drawing.Size(340, 28);
@@ -153,9 +153,9 @@
             this.lblregistrationconformpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblregistrationconformpassword.Location = new System.Drawing.Point(28, 309);
             this.lblregistrationconformpassword.Name = "lblregistrationconformpassword";
-            this.lblregistrationconformpassword.Size = new System.Drawing.Size(234, 29);
+            this.lblregistrationconformpassword.Size = new System.Drawing.Size(226, 29);
             this.lblregistrationconformpassword.TabIndex = 1;
-            this.lblregistrationconformpassword.Text = "Conform Password";
+            this.lblregistrationconformpassword.Text = "Confirm Password";
             // 
             // txtregistrationconformpassword
             // 
@@ -192,21 +192,11 @@
             this.txtuserregistrationmobile.Size = new System.Drawing.Size(340, 26);
             this.txtuserregistrationmobile.TabIndex = 7;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 428);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 29);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "mobile";
-            // 
             // lbluserregistrationemail
             // 
             this.lbluserregistrationemail.AutoSize = true;
             this.lbluserregistrationemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluserregistrationemail.Location = new System.Drawing.Point(28, 428);
+            this.lbluserregistrationemail.Location = new System.Drawing.Point(40, 428);
             this.lbluserregistrationemail.Name = "lbluserregistrationemail";
             this.lbluserregistrationemail.Size = new System.Drawing.Size(79, 29);
             this.lbluserregistrationemail.TabIndex = 1;
@@ -246,6 +236,7 @@
             this.txtuserregistrationdob.Name = "txtuserregistrationdob";
             this.txtuserregistrationdob.Size = new System.Drawing.Size(344, 26);
             this.txtuserregistrationdob.TabIndex = 9;
+            this.txtuserregistrationdob.TextChanged += new System.EventHandler(this.txtuserregistrationdob_TextChanged);
             // 
             // lbluserregistrationaddress
             // 
@@ -276,17 +267,17 @@
             this.btnsubmit.UseVisualStyleBackColor = false;
             this.btnsubmit.Click += new System.EventHandler(this.btnuserregistrationsubmit_Click);
             // 
-            // btnupdate
+            // btnadd
             // 
-            this.btnupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdate.Location = new System.Drawing.Point(416, 613);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(130, 56);
-            this.btnupdate.TabIndex = 12;
-            this.btnupdate.Text = "Add";
-            this.btnupdate.UseVisualStyleBackColor = false;
-            this.btnupdate.Click += new System.EventHandler(this.btnuserregistrationreset_Click);
+            this.btnadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.Location = new System.Drawing.Point(416, 613);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(130, 56);
+            this.btnadd.TabIndex = 12;
+            this.btnadd.Text = "Update";
+            this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btndelete
             // 
@@ -298,7 +289,7 @@
             this.btndelete.TabIndex = 13;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = false;
-            this.btndelete.Click += new System.EventHandler(this.btnuserregistrationsubmit_Click);
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnreset
             // 
@@ -324,7 +315,7 @@
             this.ClientSize = new System.Drawing.Size(1461, 710);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnupdate);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.combolbluserregistrationlevel);
             this.Controls.Add(this.txtuserregistrationaddress);
@@ -337,7 +328,6 @@
             this.Controls.Add(this.lbluserregistrationemail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtregistrationpassword);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbluserregistrationmobile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblregistrationconformpassword);
@@ -374,7 +364,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbluserregistrationmobile;
         private System.Windows.Forms.TextBox txtuserregistrationmobile;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbluserregistrationemail;
         private System.Windows.Forms.TextBox txtuserregistrationemail;
         private System.Windows.Forms.Label label4;
@@ -383,7 +372,7 @@
         private System.Windows.Forms.Label lbluserregistrationaddress;
         private System.Windows.Forms.TextBox txtuserregistrationaddress;
         private System.Windows.Forms.Button btnsubmit;
-        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnreset;
         private System.Windows.Forms.ErrorProvider errorProvider1;

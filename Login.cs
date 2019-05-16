@@ -11,17 +11,17 @@ using System.Data.Sql;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using Bug_Trakking_System;
+using DataAccessLayer;
 using MainMenu = Bug_Trakking_System.MainMenu;
 
 namespace BugTrakkingSystem
 {
     public partial class loginform : Form
     {
-        SqlConnection con = new SqlConnection();
+        UserClass uc = new UserClass();
         public loginform()
         {
-            SqlConnection con = new SqlConnection();
-            //con.ConnectionString = "Data Source=KRISHNA-PC\\SQLEXPRESS;Initial Catalog=STUDENT;Integrated Security=True";
+           
 
             InitializeComponent();
         }
@@ -39,25 +39,58 @@ namespace BugTrakkingSystem
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;Integrated Security=true");
-            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from login where username = '" + txtusername.Text
-                + "'and password = '" + txtpassword.Text + "'", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            string role = uc.role(txtusername.Text, txtpassword.Text);
+            if (role=="admin")
             {
-
+                this.Hide();
                 MainMenu mm = new MainMenu();
                 mm.Show();
+            }
+            else if (role=="tester")
+            {
                 this.Hide();
-
+                MainMenu mm = new MainMenu();
+                mm.btnadduser.Enabled = false;
+                mm.btnbugsreport.Enabled = false;
+                mm.btnprojectreport.Enabled = false;
+                mm.btnusersreport.Enabled = false;
+                mm.btnaddproject.Enabled = false;
+                mm.dashboardToolStripMenuItem.Enabled = false;
+                mm.administratorToolStripMenuItem.Enabled = false;
+                mm.reportsToolStripMenuItem.Enabled = false;
+                mm.Show();
+            }
+            else if (role=="developer")
+            {
+                this.Hide();
+                MainMenu mm = new MainMenu();
+                mm.btnadduser.Enabled = false;
+                
+                mm.Show();
             }
             else
             {
-                MessageBox.Show("Please enter correct username or password", "alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("You donot have permission");
             }
+
+            //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;Integrated Security=true");
+            //SqlDataAdapter sda = new SqlDataAdapter("select count(*) from login where username = '" + txtusername.Text
+            //    + "'and password = '" + txtpassword.Text + "'", conn);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //if (dt.Rows[0][0].ToString() == "1")
+            //{
+
+            //    MainMenu mm = new MainMenu();
+            //    mm.Show();
+            //    this.Hide();
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please enter correct username or password", "alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //}
             
         }
 

@@ -34,5 +34,10 @@ namespace Bug_Trakking_System
         {
             dataGridView3.DataSource = pc.projectbyprojectname(textBox3.Text);
         }
+
+        private void SearchForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

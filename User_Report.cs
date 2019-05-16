@@ -32,14 +32,12 @@ namespace Bug_Trakking_System
             conn.Close();
         }
 
-        private void datagridviewuserreport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            
-
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void datagridviewuserreport_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

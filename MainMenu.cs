@@ -166,5 +166,15 @@ namespace Bug_Trakking_System
             SearchForm searchform = new SearchForm();
             searchform.Show();
         }
+
+        private void gitHubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gitHubmenu_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/RajPujara/Bug_Tracking_System");
+        }
     }
 }

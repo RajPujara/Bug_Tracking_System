@@ -47,6 +47,7 @@
             this.aboutUsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lognToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.gitHubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.lbldashboardpage = new System.Windows.Forms.Label();
             this.btnusersreport = new System.Windows.Forms.Button();
             this.btnadduser = new System.Windows.Forms.Button();
@@ -216,6 +217,7 @@
             // 
             // lognToolStripMenuItem
             // 
+            this.lognToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lognToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.lognToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lognToolStripMenuItem.ForeColor = System.Drawing.Color.White;
@@ -234,7 +236,8 @@
             this.administratorToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.aboutUsToolStripMenuItem,
-            this.lognToolStripMenuItem});
+            this.lognToolStripMenuItem,
+            this.gitHubmenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 20, 5, 20);
@@ -243,6 +246,15 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // gitHubmenu
+            // 
+            this.gitHubmenu.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.gitHubmenu.ForeColor = System.Drawing.Color.White;
+            this.gitHubmenu.Name = "gitHubmenu";
+            this.gitHubmenu.Size = new System.Drawing.Size(135, 41);
+            this.gitHubmenu.Text = "GitHub";
+            this.gitHubmenu.Click += new System.EventHandler(this.gitHubmenu_Click);
             // 
             // lbldashboardpage
             // 
@@ -373,16 +385,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administratorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewBugsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewProjectTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programmingLanguageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewBugTypeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem projectReportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bugReportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersReportsToolStripMenuItem;
@@ -391,14 +399,18 @@
         private System.Windows.Forms.ToolStripMenuItem lognToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label lbldashboardpage;
-        private System.Windows.Forms.Button btnusersreport;
-        private System.Windows.Forms.Button btnadduser;
-        private System.Windows.Forms.Button btnbugsreport;
-        private System.Windows.Forms.Button btnaddbugs;
-        private System.Windows.Forms.Button btnprojectreport;
-        private System.Windows.Forms.Button btnaddproject;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem bugSolutionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gitHubmenu;
+        public System.Windows.Forms.ToolStripMenuItem administratorToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        public System.Windows.Forms.Button btnusersreport;
+        public System.Windows.Forms.Button btnadduser;
+        public System.Windows.Forms.Button btnbugsreport;
+        public System.Windows.Forms.Button btnaddbugs;
+        public System.Windows.Forms.Button btnprojectreport;
+        public System.Windows.Forms.Button btnaddproject;
+        public System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
     }
 }

@@ -52,7 +52,7 @@
             this.datagridviewuserreport.Name = "datagridviewuserreport";
             this.datagridviewuserreport.RowHeadersWidth = 47;
             this.datagridviewuserreport.RowTemplate.Height = 28;
-            this.datagridviewuserreport.Size = new System.Drawing.Size(1494, 601);
+            this.datagridviewuserreport.Size = new System.Drawing.Size(1542, 601);
             this.datagridviewuserreport.TabIndex = 2;
             this.datagridviewuserreport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewuserreport_CellContentClick);
             // 
@@ -61,7 +61,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1493, 669);
+            this.ClientSize = new System.Drawing.Size(1542, 669);
             this.Controls.Add(this.datagridviewuserreport);
             this.Controls.Add(this.label1);
             this.Name = "userreport";

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using DataAccessLayer;
 using System.Text.RegularExpressions;
+using System.Data.Sql;
+
 
 namespace Bug_Trakking_System
 {
@@ -66,6 +68,7 @@ namespace Bug_Trakking_System
                 }
                 else
                 {
+                    MessageBox.Show(combolbluserregistrationlevel.Text);
                     int r = uc.manageusers(0, txtregistrationusername.Text, txtregistrationpassword.Text, combolbluserregistrationlevel.Text, txtuserregistrationmobile.Text, txtuserregistrationemail.Text
                         , txtuserregistrationdob.Text, txtuserregistrationaddress.Text, DateTime.Now.ToString(), txtuserregistrationname.Text, DateTime.Now.ToString(), 1);
                     if (r >= 1)
@@ -124,6 +127,46 @@ namespace Bug_Trakking_System
             bool isValid = regex.IsMatch(txtuserregistrationemail.Text.Trim());
             return isValid;
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+
+        }
+        // add new class
+
+
+
+
+
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            //userreport ur = new userreport();
+            //ur.Show();
+            //string selected_cid = datagridviewuserreport.CurrentRow.cells["ID"].Value.Tostring();
+            //string selected_cun = datagridviewuserreport.CurrentRow.cells["username"].Value.Tostring();
+            //string selected_cpp = datagridviewuserreport.CurrentRow.cells["password"].Value.Tostring();
+            //string selected_cmb = datagridviewuserreport.CurrentRow.cells["mobile"].Value.Tostring();
+            //string selected_ceml = datagridviewuserreport.CurrentRow.cells["email"].Value.Tostring();
+            //string selected_cdob = datagridviewuserreport.CurrentRow.cells["DOB"].Value.Tostring();
+            //string selected_cadd = datagridviewuserreport.CurrentRow.cells["address"].Value.Tostring();
+            //string selected_ccre = datagridviewuserreport.CurrentRow.cells["created_at"].Value.Tostring();
+            //string selected_cupd = datagridviewuserreport.CurrentRow.cells["updated_at"].Value.Tostring();
+            //string selected_cfn = datagridviewuserreport.CurrentRow.cells["full_name"].Value.Tostring();
+
+            //string delete_row = "delete * from users where id = '" + selected_cid + "'AND username='" + selected_cun + "' AND  password='" + selected_cpp + "' ' AND  mobile='" + selected_cmb + "' ' AND  email='" + selected_ceml + "' ' AND  DOB='" + selected_cdob + "' ' AND  address='" + selected_cadd + "' ' AND  created_at='" + selected_ccre + "' ' AND  updated_at='" + selected_cupd + "' ' AND  full_name='" + selected_cfn + "' ";
+            //int count = DataAccess.execute(delete_row);
+
+
+
+        }
+
+
+
+        private void txtuserregistrationdob_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
-    }
+}
 
