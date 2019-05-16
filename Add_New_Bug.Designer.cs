@@ -30,19 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lbladdnewbugtitle = new System.Windows.Forms.Label();
-            this.txtaddnewbugtitle = new System.Windows.Forms.TextBox();
-            this.lbladdnewbugselectproject = new System.Windows.Forms.Label();
-            this.comboaddnewbugselectproject = new System.Windows.Forms.ComboBox();
-            this.lbladdnewbugselecttype = new System.Windows.Forms.Label();
-            this.comboaddnewbugselecttype = new System.Windows.Forms.ComboBox();
-            this.lbladdnewbugassignedto = new System.Windows.Forms.Label();
-            this.comboaddnewbugassignedto = new System.Windows.Forms.ComboBox();
-            this.lbladdnewbugstatus = new System.Windows.Forms.Label();
-            this.comboaddnewbugstatus = new System.Windows.Forms.ComboBox();
-            this.lbladdnewbugdescription = new System.Windows.Forms.Label();
-            this.richtextboxaddnewbugdescription = new System.Windows.Forms.RichTextBox();
+            this.txttitle = new System.Windows.Forms.TextBox();
             this.btnresetbug = new System.Windows.Forms.Button();
-            this.lblbugsnapshot = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtbugclass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,11 +39,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.datetime = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtbuglinenumber = new System.Windows.Forms.TextBox();
-            this.btnbugsnapshot = new System.Windows.Forms.Button();
+            this.txtlinenumber = new System.Windows.Forms.TextBox();
             this.btnsavebug = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblbugname = new System.Windows.Forms.Label();
+            this.txtbugname = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblidentifyby = new System.Windows.Forms.Label();
+            this.cmbidentifyby = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtcode = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.picerror = new System.Windows.Forms.PictureBox();
+            this.btnbrowse = new System.Windows.Forms.Button();
+            this.lblproject = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picerror)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,11 +63,12 @@
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(462, 9);
+            this.label1.Location = new System.Drawing.Point(467, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(378, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add New Bug";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbladdnewbugtitle
             // 
@@ -79,119 +80,20 @@
             this.lbladdnewbugtitle.TabIndex = 1;
             this.lbladdnewbugtitle.Text = "Title";
             // 
-            // txtaddnewbugtitle
+            // txttitle
             // 
-            this.txtaddnewbugtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtaddnewbugtitle.Location = new System.Drawing.Point(278, 108);
-            this.txtaddnewbugtitle.Name = "txtaddnewbugtitle";
-            this.txtaddnewbugtitle.Size = new System.Drawing.Size(222, 32);
-            this.txtaddnewbugtitle.TabIndex = 2;
-            // 
-            // lbladdnewbugselectproject
-            // 
-            this.lbladdnewbugselectproject.AutoSize = true;
-            this.lbladdnewbugselectproject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdnewbugselectproject.Location = new System.Drawing.Point(32, 170);
-            this.lbladdnewbugselectproject.Name = "lbladdnewbugselectproject";
-            this.lbladdnewbugselectproject.Size = new System.Drawing.Size(177, 29);
-            this.lbladdnewbugselectproject.TabIndex = 3;
-            this.lbladdnewbugselectproject.Text = "Select Project";
-            // 
-            // comboaddnewbugselectproject
-            // 
-            this.comboaddnewbugselectproject.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboaddnewbugselectproject.FormattingEnabled = true;
-            this.comboaddnewbugselectproject.Location = new System.Drawing.Point(278, 167);
-            this.comboaddnewbugselectproject.Name = "comboaddnewbugselectproject";
-            this.comboaddnewbugselectproject.Size = new System.Drawing.Size(222, 34);
-            this.comboaddnewbugselectproject.TabIndex = 4;
-            // 
-            // lbladdnewbugselecttype
-            // 
-            this.lbladdnewbugselecttype.AutoSize = true;
-            this.lbladdnewbugselecttype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdnewbugselecttype.Location = new System.Drawing.Point(32, 239);
-            this.lbladdnewbugselecttype.Name = "lbladdnewbugselecttype";
-            this.lbladdnewbugselecttype.Size = new System.Drawing.Size(153, 29);
-            this.lbladdnewbugselecttype.TabIndex = 3;
-            this.lbladdnewbugselecttype.Text = "Select Type";
-            // 
-            // comboaddnewbugselecttype
-            // 
-            this.comboaddnewbugselecttype.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboaddnewbugselecttype.FormattingEnabled = true;
-            this.comboaddnewbugselecttype.Location = new System.Drawing.Point(278, 236);
-            this.comboaddnewbugselecttype.Name = "comboaddnewbugselecttype";
-            this.comboaddnewbugselecttype.Size = new System.Drawing.Size(222, 34);
-            this.comboaddnewbugselecttype.TabIndex = 4;
-            // 
-            // lbladdnewbugassignedto
-            // 
-            this.lbladdnewbugassignedto.AutoSize = true;
-            this.lbladdnewbugassignedto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdnewbugassignedto.Location = new System.Drawing.Point(32, 308);
-            this.lbladdnewbugassignedto.Name = "lbladdnewbugassignedto";
-            this.lbladdnewbugassignedto.Size = new System.Drawing.Size(160, 29);
-            this.lbladdnewbugassignedto.TabIndex = 3;
-            this.lbladdnewbugassignedto.Text = "Assigned To";
-            // 
-            // comboaddnewbugassignedto
-            // 
-            this.comboaddnewbugassignedto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboaddnewbugassignedto.FormattingEnabled = true;
-            this.comboaddnewbugassignedto.Location = new System.Drawing.Point(278, 308);
-            this.comboaddnewbugassignedto.Name = "comboaddnewbugassignedto";
-            this.comboaddnewbugassignedto.Size = new System.Drawing.Size(222, 34);
-            this.comboaddnewbugassignedto.TabIndex = 4;
-            // 
-            // lbladdnewbugstatus
-            // 
-            this.lbladdnewbugstatus.AutoSize = true;
-            this.lbladdnewbugstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdnewbugstatus.Location = new System.Drawing.Point(32, 370);
-            this.lbladdnewbugstatus.Name = "lbladdnewbugstatus";
-            this.lbladdnewbugstatus.Size = new System.Drawing.Size(138, 29);
-            this.lbladdnewbugstatus.TabIndex = 3;
-            this.lbladdnewbugstatus.Text = "Bug Status";
-            // 
-            // comboaddnewbugstatus
-            // 
-            this.comboaddnewbugstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboaddnewbugstatus.FormattingEnabled = true;
-            this.comboaddnewbugstatus.Items.AddRange(new object[] {
-            "Pending",
-            "prograssing",
-            "Solved"});
-            this.comboaddnewbugstatus.Location = new System.Drawing.Point(278, 370);
-            this.comboaddnewbugstatus.Name = "comboaddnewbugstatus";
-            this.comboaddnewbugstatus.Size = new System.Drawing.Size(222, 34);
-            this.comboaddnewbugstatus.TabIndex = 4;
-            // 
-            // lbladdnewbugdescription
-            // 
-            this.lbladdnewbugdescription.AutoSize = true;
-            this.lbladdnewbugdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdnewbugdescription.Location = new System.Drawing.Point(32, 446);
-            this.lbladdnewbugdescription.Name = "lbladdnewbugdescription";
-            this.lbladdnewbugdescription.Size = new System.Drawing.Size(146, 29);
-            this.lbladdnewbugdescription.TabIndex = 5;
-            this.lbladdnewbugdescription.Text = "Description";
-            // 
-            // richtextboxaddnewbugdescription
-            // 
-            this.richtextboxaddnewbugdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richtextboxaddnewbugdescription.Location = new System.Drawing.Point(278, 446);
-            this.richtextboxaddnewbugdescription.Name = "richtextboxaddnewbugdescription";
-            this.richtextboxaddnewbugdescription.Size = new System.Drawing.Size(238, 96);
-            this.richtextboxaddnewbugdescription.TabIndex = 6;
-            this.richtextboxaddnewbugdescription.Text = "";
+            this.txttitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttitle.Location = new System.Drawing.Point(278, 108);
+            this.txttitle.Name = "txttitle";
+            this.txttitle.Size = new System.Drawing.Size(222, 32);
+            this.txttitle.TabIndex = 2;
             // 
             // btnresetbug
             // 
             this.btnresetbug.BackColor = System.Drawing.Color.Teal;
             this.btnresetbug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetbug.ForeColor = System.Drawing.Color.White;
-            this.btnresetbug.Location = new System.Drawing.Point(891, 610);
+            this.btnresetbug.Location = new System.Drawing.Point(400, 551);
             this.btnresetbug.Name = "btnresetbug";
             this.btnresetbug.Size = new System.Drawing.Size(120, 53);
             this.btnresetbug.TabIndex = 7;
@@ -199,21 +101,11 @@
             this.btnresetbug.UseVisualStyleBackColor = false;
             this.btnresetbug.Click += new System.EventHandler(this.btnresetbug_Click);
             // 
-            // lblbugsnapshot
-            // 
-            this.lblbugsnapshot.AutoSize = true;
-            this.lblbugsnapshot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbugsnapshot.Location = new System.Drawing.Point(637, 108);
-            this.lblbugsnapshot.Name = "lblbugsnapshot";
-            this.lblbugsnapshot.Size = new System.Drawing.Size(122, 29);
-            this.lblbugsnapshot.TabIndex = 9;
-            this.lblbugsnapshot.Text = "Snapshot";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(962, 404);
+            this.label2.Location = new System.Drawing.Point(32, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 1;
@@ -222,7 +114,7 @@
             // txtbugclass
             // 
             this.txtbugclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbugclass.Location = new System.Drawing.Point(1151, 386);
+            this.txtbugclass.Location = new System.Drawing.Point(278, 237);
             this.txtbugclass.Name = "txtbugclass";
             this.txtbugclass.Size = new System.Drawing.Size(222, 32);
             this.txtbugclass.TabIndex = 2;
@@ -231,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(962, 307);
+            this.label4.Location = new System.Drawing.Point(32, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 29);
             this.label4.TabIndex = 1;
@@ -240,7 +132,7 @@
             // txtbugmethod
             // 
             this.txtbugmethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbugmethod.Location = new System.Drawing.Point(1151, 307);
+            this.txtbugmethod.Location = new System.Drawing.Point(278, 172);
             this.txtbugmethod.Name = "txtbugmethod";
             this.txtbugmethod.Size = new System.Drawing.Size(222, 32);
             this.txtbugmethod.TabIndex = 2;
@@ -249,7 +141,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(955, 172);
+            this.label5.Location = new System.Drawing.Point(32, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 29);
             this.label5.TabIndex = 1;
@@ -258,7 +150,7 @@
             // datetime
             // 
             this.datetime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetime.Location = new System.Drawing.Point(1151, 170);
+            this.datetime.Location = new System.Drawing.Point(278, 312);
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(222, 26);
             this.datetime.TabIndex = 10;
@@ -267,36 +159,26 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(962, 227);
+            this.label3.Location = new System.Drawing.Point(32, 372);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Line Number";
             // 
-            // txtbuglinenumber
+            // txtlinenumber
             // 
-            this.txtbuglinenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbuglinenumber.Location = new System.Drawing.Point(1151, 236);
-            this.txtbuglinenumber.Name = "txtbuglinenumber";
-            this.txtbuglinenumber.Size = new System.Drawing.Size(203, 32);
-            this.txtbuglinenumber.TabIndex = 2;
-            // 
-            // btnbugsnapshot
-            // 
-            this.btnbugsnapshot.Location = new System.Drawing.Point(659, 321);
-            this.btnbugsnapshot.Name = "btnbugsnapshot";
-            this.btnbugsnapshot.Size = new System.Drawing.Size(143, 56);
-            this.btnbugsnapshot.TabIndex = 11;
-            this.btnbugsnapshot.Text = "Attach";
-            this.btnbugsnapshot.UseVisualStyleBackColor = true;
-            this.btnbugsnapshot.Click += new System.EventHandler(this.btnbugsnapshot_Click);
+            this.txtlinenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlinenumber.Location = new System.Drawing.Point(278, 372);
+            this.txtlinenumber.Name = "txtlinenumber";
+            this.txtlinenumber.Size = new System.Drawing.Size(222, 32);
+            this.txtlinenumber.TabIndex = 2;
             // 
             // btnsavebug
             // 
             this.btnsavebug.BackColor = System.Drawing.Color.Orange;
             this.btnsavebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsavebug.ForeColor = System.Drawing.Color.White;
-            this.btnsavebug.Location = new System.Drawing.Point(356, 610);
+            this.btnsavebug.Location = new System.Drawing.Point(37, 551);
             this.btnsavebug.Name = "btnsavebug";
             this.btnsavebug.Size = new System.Drawing.Size(181, 53);
             this.btnsavebug.TabIndex = 7;
@@ -304,13 +186,128 @@
             this.btnsavebug.UseVisualStyleBackColor = false;
             this.btnsavebug.Click += new System.EventHandler(this.btnsavebug_Click);
             // 
-            // pictureBox1
+            // lblbugname
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(622, 155);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 139);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.lblbugname.AutoSize = true;
+            this.lblbugname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbugname.Location = new System.Drawing.Point(32, 437);
+            this.lblbugname.Name = "lblbugname";
+            this.lblbugname.Size = new System.Drawing.Size(135, 29);
+            this.lblbugname.TabIndex = 1;
+            this.lblbugname.Text = "Bug Name";
+            // 
+            // txtbugname
+            // 
+            this.txtbugname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbugname.Location = new System.Drawing.Point(278, 437);
+            this.txtbugname.Name = "txtbugname";
+            this.txtbugname.Size = new System.Drawing.Size(222, 32);
+            this.txtbugname.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(723, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(165, 29);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Class Library";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(969, 108);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(297, 32);
+            this.textBox1.TabIndex = 2;
+            // 
+            // lblidentifyby
+            // 
+            this.lblidentifyby.AutoSize = true;
+            this.lblidentifyby.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidentifyby.Location = new System.Drawing.Point(728, 183);
+            this.lblidentifyby.Name = "lblidentifyby";
+            this.lblidentifyby.Size = new System.Drawing.Size(165, 29);
+            this.lblidentifyby.TabIndex = 11;
+            this.lblidentifyby.Text = "Identified By:";
+            // 
+            // cmbidentifyby
+            // 
+            this.cmbidentifyby.FormattingEnabled = true;
+            this.cmbidentifyby.Location = new System.Drawing.Point(969, 187);
+            this.cmbidentifyby.Name = "cmbidentifyby";
+            this.cmbidentifyby.Size = new System.Drawing.Size(297, 28);
+            this.cmbidentifyby.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(737, 309);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 29);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Code";
+            // 
+            // txtcode
+            // 
+            this.txtcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtcode.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtcode.Location = new System.Drawing.Point(969, 274);
+            this.txtcode.Multiline = true;
+            this.txtcode.Name = "txtcode";
+            this.txtcode.Size = new System.Drawing.Size(297, 139);
+            this.txtcode.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(737, 503);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(188, 29);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Error Snapshot";
+            // 
+            // picerror
+            // 
+            this.picerror.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picerror.Location = new System.Drawing.Point(969, 491);
+            this.picerror.Name = "picerror";
+            this.picerror.Size = new System.Drawing.Size(297, 181);
+            this.picerror.TabIndex = 15;
+            this.picerror.TabStop = false;
+            // 
+            // btnbrowse
+            // 
+            this.btnbrowse.BackColor = System.Drawing.Color.DimGray;
+            this.btnbrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbrowse.Location = new System.Drawing.Point(742, 567);
+            this.btnbrowse.Name = "btnbrowse";
+            this.btnbrowse.Size = new System.Drawing.Size(146, 55);
+            this.btnbrowse.TabIndex = 16;
+            this.btnbrowse.Text = "Browse";
+            this.btnbrowse.UseVisualStyleBackColor = false;
+            this.btnbrowse.Click += new System.EventHandler(this.btnbrowse_Click);
+            // 
+            // lblproject
+            // 
+            this.lblproject.AutoSize = true;
+            this.lblproject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblproject.Location = new System.Drawing.Point(22, 70);
+            this.lblproject.Name = "lblproject";
+            this.lblproject.Size = new System.Drawing.Size(96, 29);
+            this.lblproject.TabIndex = 1;
+            this.lblproject.Text = "Project";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(278, 58);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(183, 28);
+            this.comboBox1.TabIndex = 17;
             // 
             // addnewbug
             // 
@@ -318,38 +315,37 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1472, 701);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnbugsnapshot);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnbrowse);
+            this.Controls.Add(this.picerror);
+            this.Controls.Add(this.txtcode);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmbidentifyby);
+            this.Controls.Add(this.lblidentifyby);
             this.Controls.Add(this.datetime);
             this.Controls.Add(this.btnsavebug);
-            this.Controls.Add(this.lblbugsnapshot);
             this.Controls.Add(this.btnresetbug);
-            this.Controls.Add(this.richtextboxaddnewbugdescription);
-            this.Controls.Add(this.lbladdnewbugdescription);
-            this.Controls.Add(this.comboaddnewbugstatus);
-            this.Controls.Add(this.lbladdnewbugstatus);
-            this.Controls.Add(this.comboaddnewbugassignedto);
-            this.Controls.Add(this.lbladdnewbugassignedto);
-            this.Controls.Add(this.comboaddnewbugselecttype);
-            this.Controls.Add(this.lbladdnewbugselecttype);
-            this.Controls.Add(this.comboaddnewbugselectproject);
-            this.Controls.Add(this.lbladdnewbugselectproject);
             this.Controls.Add(this.txtbugmethod);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtbuglinenumber);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtbugname);
+            this.Controls.Add(this.lblbugname);
+            this.Controls.Add(this.txtlinenumber);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtbugclass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtaddnewbugtitle);
+            this.Controls.Add(this.lblproject);
+            this.Controls.Add(this.txttitle);
             this.Controls.Add(this.lbladdnewbugtitle);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "addnewbug";
-            this.Text = "Add New Bug";
             this.Load += new System.EventHandler(this.addnewbug_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picerror)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,19 +355,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbladdnewbugtitle;
-        private System.Windows.Forms.TextBox txtaddnewbugtitle;
-        private System.Windows.Forms.Label lbladdnewbugselectproject;
-        private System.Windows.Forms.ComboBox comboaddnewbugselectproject;
-        private System.Windows.Forms.Label lbladdnewbugselecttype;
-        private System.Windows.Forms.ComboBox comboaddnewbugselecttype;
-        private System.Windows.Forms.Label lbladdnewbugassignedto;
-        private System.Windows.Forms.ComboBox comboaddnewbugassignedto;
-        private System.Windows.Forms.Label lbladdnewbugstatus;
-        private System.Windows.Forms.ComboBox comboaddnewbugstatus;
-        private System.Windows.Forms.Label lbladdnewbugdescription;
-        private System.Windows.Forms.RichTextBox richtextboxaddnewbugdescription;
+        private System.Windows.Forms.TextBox txttitle;
         private System.Windows.Forms.Button btnresetbug;
-        private System.Windows.Forms.Label lblbugsnapshot;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtbugclass;
         private System.Windows.Forms.Label label4;
@@ -379,9 +364,20 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker datetime;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtbuglinenumber;
-        private System.Windows.Forms.Button btnbugsnapshot;
+        private System.Windows.Forms.TextBox txtlinenumber;
         private System.Windows.Forms.Button btnsavebug;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblbugname;
+        private System.Windows.Forms.TextBox txtbugname;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblidentifyby;
+        private System.Windows.Forms.ComboBox cmbidentifyby;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtcode;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox picerror;
+        private System.Windows.Forms.Button btnbrowse;
+        private System.Windows.Forms.Label lblproject;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

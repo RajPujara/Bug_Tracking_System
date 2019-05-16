@@ -3,16 +3,12 @@ D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\Bug_Trakking_System.
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\Bug_Trakking_System.pdb
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Tracking_System.csprojAssemblyReference.cache
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.aboutus.resources
-D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.addnewbug.resources
-D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Add_new_bug_type.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.addnewproject.resources
-D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Add_new_project_type.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.addnewuser.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.bugreport.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Bug_Solution.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\BugTrakkingSystem.loginform.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.MainMenu.resources
-D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Programming_language.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.projectreport.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Properties.Resources.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.userreport.resources
@@ -27,3 +23,7 @@ D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\BusinessLogicLayer.p
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\DataAccessLayer.pdb
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Tracking_System.csproj.CopyComplete
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.ChangePassword.resources
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\WinFormsSyntaxHighlighter.dll
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\WinFormsSyntaxHighlighter.pdb
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.addnewbug.resources
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Bug_Solution_Report.resources

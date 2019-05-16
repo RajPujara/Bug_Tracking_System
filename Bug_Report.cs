@@ -40,5 +40,15 @@ namespace Bug_Trakking_System
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bugreport_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

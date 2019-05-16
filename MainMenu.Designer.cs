@@ -32,11 +32,8 @@
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addnewbug = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewProjectTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programmingLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewBugTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugSolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +53,7 @@
             this.btnprojectreport = new System.Windows.Forms.Button();
             this.btnaddproject = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bugSolutionReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,18 +65,14 @@
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
             this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(196, 41);
             this.dashboardToolStripMenuItem.Text = "Dashboard";
-            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // administratorToolStripMenuItem
             // 
             this.administratorToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.administratorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewProjectToolStripMenuItem,
-            this.addNewBugsToolStripMenuItem,
+            this.addnewbug,
             this.addUserToolStripMenuItem,
-            this.addNewProjectTypeToolStripMenuItem,
-            this.programmingLanguageToolStripMenuItem,
-            this.addNewBugTypeToolStripMenuItem,
             this.bugSolutionToolStripMenuItem,
             this.searchFormToolStripMenuItem});
             this.administratorToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,70 +80,46 @@
             this.administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
             this.administratorToolStripMenuItem.Size = new System.Drawing.Size(233, 41);
             this.administratorToolStripMenuItem.Text = "Administrator";
+            this.administratorToolStripMenuItem.Click += new System.EventHandler(this.administratorToolStripMenuItem_Click);
             // 
             // addNewProjectToolStripMenuItem
             // 
             this.addNewProjectToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.addNewProjectToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewProjectToolStripMenuItem.Name = "addNewProjectToolStripMenuItem";
-            this.addNewProjectToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
+            this.addNewProjectToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.addNewProjectToolStripMenuItem.Text = "Add New Project";
             this.addNewProjectToolStripMenuItem.Click += new System.EventHandler(this.addNewProjectToolStripMenuItem_Click);
             // 
-            // addNewBugsToolStripMenuItem
+            // addnewbug
             // 
-            this.addNewBugsToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
-            this.addNewBugsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewBugsToolStripMenuItem.Name = "addNewBugsToolStripMenuItem";
-            this.addNewBugsToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
-            this.addNewBugsToolStripMenuItem.Text = "Add New Bugs";
-            this.addNewBugsToolStripMenuItem.Click += new System.EventHandler(this.addNewBugsToolStripMenuItem_Click);
+            this.addnewbug.BackColor = System.Drawing.Color.SteelBlue;
+            this.addnewbug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addnewbug.Name = "addnewbug";
+            this.addnewbug.Size = new System.Drawing.Size(360, 42);
+            this.addnewbug.Text = "Add New Bugs";
+            this.addnewbug.Click += new System.EventHandler(this.addNewBugsToolStripMenuItem_Click);
             // 
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.addUserToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
-            // 
-            // addNewProjectTypeToolStripMenuItem
-            // 
-            this.addNewProjectTypeToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
-            this.addNewProjectTypeToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewProjectTypeToolStripMenuItem.Name = "addNewProjectTypeToolStripMenuItem";
-            this.addNewProjectTypeToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
-            this.addNewProjectTypeToolStripMenuItem.Text = "Add New Project Type";
-            this.addNewProjectTypeToolStripMenuItem.Click += new System.EventHandler(this.addNewProjectTypeToolStripMenuItem_Click);
-            // 
-            // programmingLanguageToolStripMenuItem
-            // 
-            this.programmingLanguageToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
-            this.programmingLanguageToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.programmingLanguageToolStripMenuItem.Name = "programmingLanguageToolStripMenuItem";
-            this.programmingLanguageToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
-            this.programmingLanguageToolStripMenuItem.Text = "Programming Language";
-            this.programmingLanguageToolStripMenuItem.Click += new System.EventHandler(this.programmingLanguageToolStripMenuItem_Click);
-            // 
-            // addNewBugTypeToolStripMenuItem
-            // 
-            this.addNewBugTypeToolStripMenuItem.Name = "addNewBugTypeToolStripMenuItem";
-            this.addNewBugTypeToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
-            this.addNewBugTypeToolStripMenuItem.Text = "Add New Bug Type";
-            this.addNewBugTypeToolStripMenuItem.Click += new System.EventHandler(this.addNewBugTypeToolStripMenuItem_Click);
             // 
             // bugSolutionToolStripMenuItem
             // 
             this.bugSolutionToolStripMenuItem.Name = "bugSolutionToolStripMenuItem";
-            this.bugSolutionToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
+            this.bugSolutionToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.bugSolutionToolStripMenuItem.Text = "Bug Solution";
             this.bugSolutionToolStripMenuItem.Click += new System.EventHandler(this.bugSolutionToolStripMenuItem_Click);
             // 
             // searchFormToolStripMenuItem
             // 
             this.searchFormToolStripMenuItem.Name = "searchFormToolStripMenuItem";
-            this.searchFormToolStripMenuItem.Size = new System.Drawing.Size(472, 42);
+            this.searchFormToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.searchFormToolStripMenuItem.Text = "Search Form";
             this.searchFormToolStripMenuItem.Click += new System.EventHandler(this.searchFormToolStripMenuItem_Click);
             // 
@@ -159,20 +129,20 @@
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.projectReportsToolStripMenuItem,
             this.bugReportsToolStripMenuItem,
-            this.usersReportsToolStripMenuItem});
+            this.usersReportsToolStripMenuItem,
+            this.bugSolutionReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(147, 41);
             this.reportsToolStripMenuItem.Text = "Reports";
-            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
             // projectReportsToolStripMenuItem
             // 
             this.projectReportsToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.projectReportsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectReportsToolStripMenuItem.Name = "projectReportsToolStripMenuItem";
-            this.projectReportsToolStripMenuItem.Size = new System.Drawing.Size(340, 42);
+            this.projectReportsToolStripMenuItem.Size = new System.Drawing.Size(411, 42);
             this.projectReportsToolStripMenuItem.Text = "Project Reports";
             this.projectReportsToolStripMenuItem.Click += new System.EventHandler(this.projectReportsToolStripMenuItem_Click);
             // 
@@ -181,7 +151,7 @@
             this.bugReportsToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.bugReportsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bugReportsToolStripMenuItem.Name = "bugReportsToolStripMenuItem";
-            this.bugReportsToolStripMenuItem.Size = new System.Drawing.Size(340, 42);
+            this.bugReportsToolStripMenuItem.Size = new System.Drawing.Size(411, 42);
             this.bugReportsToolStripMenuItem.Text = "Bug Reports";
             this.bugReportsToolStripMenuItem.Click += new System.EventHandler(this.bugReportsToolStripMenuItem_Click);
             // 
@@ -190,7 +160,7 @@
             this.usersReportsToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.usersReportsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersReportsToolStripMenuItem.Name = "usersReportsToolStripMenuItem";
-            this.usersReportsToolStripMenuItem.Size = new System.Drawing.Size(340, 42);
+            this.usersReportsToolStripMenuItem.Size = new System.Drawing.Size(411, 42);
             this.usersReportsToolStripMenuItem.Text = "Users Reports";
             this.usersReportsToolStripMenuItem.Click += new System.EventHandler(this.usersReportsToolStripMenuItem_Click);
             // 
@@ -204,14 +174,13 @@
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(98, 41);
             this.aboutUsToolStripMenuItem.Text = "Help";
-            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // aboutUsToolStripMenuItem1
             // 
             this.aboutUsToolStripMenuItem1.BackColor = System.Drawing.Color.SteelBlue;
             this.aboutUsToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aboutUsToolStripMenuItem1.Name = "aboutUsToolStripMenuItem1";
-            this.aboutUsToolStripMenuItem1.Size = new System.Drawing.Size(237, 42);
+            this.aboutUsToolStripMenuItem1.Size = new System.Drawing.Size(252, 42);
             this.aboutUsToolStripMenuItem1.Text = "AboutUs";
             this.aboutUsToolStripMenuItem1.Click += new System.EventHandler(this.aboutUsToolStripMenuItem1_Click);
             // 
@@ -245,7 +214,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1458, 81);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // gitHubmenu
             // 
@@ -279,7 +247,6 @@
             this.btnusersreport.TabIndex = 3;
             this.btnusersreport.Text = "Users Report";
             this.btnusersreport.UseVisualStyleBackColor = false;
-            this.btnusersreport.Click += new System.EventHandler(this.btnusersreport_Click);
             // 
             // btnadduser
             // 
@@ -292,7 +259,6 @@
             this.btnadduser.TabIndex = 4;
             this.btnadduser.Text = "Add User";
             this.btnadduser.UseVisualStyleBackColor = false;
-            this.btnadduser.Click += new System.EventHandler(this.btnadduser_Click);
             // 
             // btnbugsreport
             // 
@@ -305,7 +271,6 @@
             this.btnbugsreport.TabIndex = 5;
             this.btnbugsreport.Text = "Bugs Report";
             this.btnbugsreport.UseVisualStyleBackColor = false;
-            this.btnbugsreport.Click += new System.EventHandler(this.btnbugsreport_Click);
             // 
             // btnaddbugs
             // 
@@ -318,7 +283,6 @@
             this.btnaddbugs.TabIndex = 6;
             this.btnaddbugs.Text = "Add New Bug";
             this.btnaddbugs.UseVisualStyleBackColor = false;
-            this.btnaddbugs.Click += new System.EventHandler(this.btnaddbugs_Click);
             // 
             // btnprojectreport
             // 
@@ -331,7 +295,6 @@
             this.btnprojectreport.TabIndex = 7;
             this.btnprojectreport.Text = "Project Report";
             this.btnprojectreport.UseVisualStyleBackColor = false;
-            this.btnprojectreport.Click += new System.EventHandler(this.btnprojectreport_Click);
             // 
             // btnaddproject
             // 
@@ -344,7 +307,6 @@
             this.btnaddproject.TabIndex = 8;
             this.btnaddproject.Text = "Add Project";
             this.btnaddproject.UseVisualStyleBackColor = false;
-            this.btnaddproject.Click += new System.EventHandler(this.btnaddproject_Click);
             // 
             // panel1
             // 
@@ -356,6 +318,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1162, 487);
             this.panel1.TabIndex = 10;
+            // 
+            // bugSolutionReportToolStripMenuItem
+            // 
+            this.bugSolutionReportToolStripMenuItem.Name = "bugSolutionReportToolStripMenuItem";
+            this.bugSolutionReportToolStripMenuItem.Size = new System.Drawing.Size(411, 42);
+            this.bugSolutionReportToolStripMenuItem.Text = "Bug Solution Report";
+            this.bugSolutionReportToolStripMenuItem.Click += new System.EventHandler(this.bugSolutionReportToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -376,7 +345,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.Text = "MainMenu";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -386,11 +354,8 @@
 
         #endregion
         private System.Windows.Forms.ToolStripMenuItem addNewProjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewBugsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addnewbug;
         private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewProjectTypeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programmingLanguageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewBugTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem projectReportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bugReportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersReportsToolStripMenuItem;
@@ -412,5 +377,6 @@
         public System.Windows.Forms.Button btnprojectreport;
         public System.Windows.Forms.Button btnaddproject;
         public System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bugSolutionReportToolStripMenuItem;
     }
 }

@@ -40,13 +40,13 @@ namespace BugTrakkingSystem
         private void btnlogin_Click(object sender, EventArgs e)
         {
             string role = uc.role(txtusername.Text, txtpassword.Text);
-            if (role=="admin")
+            if (role == "admin")
             {
                 this.Hide();
                 MainMenu mm = new MainMenu();
                 mm.Show();
             }
-            else if (role=="tester")
+            else if (role == "tester")
             {
                 this.Hide();
                 MainMenu mm = new MainMenu();
@@ -60,12 +60,12 @@ namespace BugTrakkingSystem
                 mm.reportsToolStripMenuItem.Enabled = false;
                 mm.Show();
             }
-            else if (role=="developer")
+            else if (role == "developer")
             {
                 this.Hide();
                 MainMenu mm = new MainMenu();
                 mm.btnadduser.Enabled = false;
-                
+
                 mm.Show();
             }
             else
@@ -73,25 +73,6 @@ namespace BugTrakkingSystem
                 MessageBox.Show("You donot have permission");
             }
 
-            //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;Integrated Security=true");
-            //SqlDataAdapter sda = new SqlDataAdapter("select count(*) from login where username = '" + txtusername.Text
-            //    + "'and password = '" + txtpassword.Text + "'", conn);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //if (dt.Rows[0][0].ToString() == "1")
-            //{
-
-            //    MainMenu mm = new MainMenu();
-            //    mm.Show();
-            //    this.Hide();
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please enter correct username or password", "alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //}
-            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -58,23 +58,11 @@
     <Compile Include="Add_New_Bug.Designer.cs">
       <DependentUpon>Add_New_Bug.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_new_bug_type.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_new_bug_type.Designer.cs">
-      <DependentUpon>Add_new_bug_type.cs</DependentUpon>
-    </Compile>
     <Compile Include="Add_New_Project.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Add_New_Project.Designer.cs">
       <DependentUpon>Add_New_Project.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Add_new_project_type.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_new_project_type.Designer.cs">
-      <DependentUpon>Add_new_project_type.cs</DependentUpon>
     </Compile>
     <Compile Include="Add_User.cs">
       <SubType>Form</SubType>
@@ -94,6 +82,12 @@
     <Compile Include="Bug_Solution.Designer.cs">
       <DependentUpon>Bug_Solution.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bug_Solution_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bug_Solution_Report.Designer.cs">
+      <DependentUpon>Bug_Solution_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +95,7 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="gitHubmenu.cs" />
+    <Compile Include="HelperClass.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,12 +110,6 @@
     </Compile>
     <Compile Include="openFileDialog1.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Programming_language.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Programming_language.Designer.cs">
-      <DependentUpon>Programming_language.cs</DependentUpon>
-    </Compile>
     <Compile Include="Project_Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,14 +135,8 @@
     <EmbeddedResource Include="Add_New_Bug.resx">
       <DependentUpon>Add_New_Bug.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_new_bug_type.resx">
-      <DependentUpon>Add_new_bug_type.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Add_New_Project.resx">
       <DependentUpon>Add_New_Project.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Add_new_project_type.resx">
-      <DependentUpon>Add_new_project_type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add_User.resx">
       <DependentUpon>Add_User.cs</DependentUpon>
@@ -164,6 +147,9 @@
     <EmbeddedResource Include="Bug_Solution.resx">
       <DependentUpon>Bug_Solution.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bug_Solution_Report.resx">
+      <DependentUpon>Bug_Solution_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Programming_language.resx">
-      <DependentUpon>Programming_language.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project_Report.resx">
       <DependentUpon>Project_Report.cs</DependentUpon>
@@ -218,6 +201,10 @@
     <ProjectReference Include="DataAccessLayer\DataAccessLayer.csproj">
       <Project>{a1611ef9-00e7-4620-8edf-b0149b91a901}</Project>
       <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="WinFormsSyntaxHighlighter\WinFormsSyntaxHighlighter.csproj">
+      <Project>{a84b044a-f5dd-4220-baff-a18f17585e31}</Project>
+      <Name>WinFormsSyntaxHighlighter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
