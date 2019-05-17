@@ -32,20 +32,31 @@ namespace Bug_Trakking_System
 
         private void btnadprojectsubmit_Click(object sender, EventArgs e)
         {
-            //int res = mp.manageprojects(0, txtprojecttitle.Text, dateTimePicker1.Text, dateTimePicker2.Text, richtxtboxaddnewprojectdescription.Text, 1);
-            //if (res>0)
-            //{
-            //    MessageBox.Show("AHa Bhayo balla balla");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("SHit");
-            //}
+            if(txtprojecttitle.Text==""||richtxtboxaddnewprojectdescription.Text=="")
+            {
+                MessageBox.Show("Blank field");
+            }
+            else
+            {
+                addproject();
+            }
+           
 
-
-
-            
         }
+
+        private void addproject()
+        {
+            int res = mp.Manageprojects(0, txtprojecttitle.Text, dateTimePicker1.Text, dateTimePicker2.Text, richtxtboxaddnewprojectdescription.Text, 1);
+            if (res > 0)
+            {
+                MessageBox.Show("New project added successfully");
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
         public void clearbox()
         {
            
@@ -54,6 +65,11 @@ namespace Bug_Trakking_System
         private void btnaddprojectreset_Click(object sender, EventArgs e)
         {
             clearbox();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

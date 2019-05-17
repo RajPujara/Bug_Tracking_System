@@ -22,17 +22,17 @@ namespace Bug_Trakking_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = mc.bugbybugname(txtbugname.Text);
+            dataGridView2.DataSource = mc.bugbybugname(txtbugid.Text);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = pc.projectbyprojectname(projectname.Text);
+            dataGridView3.DataSource = pc.projectbyprojectname(btnprojectid.Text);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = pc.projectbyprojectname(projectname.Text);
+            dataGridView3.DataSource = pc.projectbyprojectname(btnprojectid.Text);
         }
 
         private void SearchForm_Load(object sender, EventArgs e)
@@ -50,6 +50,11 @@ namespace Bug_Trakking_System
         private void button4_Click(object sender, EventArgs e)
         {
             datagridsolution.DataSource = bc.solutionbysolutionid(Int32.Parse(txtsolution.Text));
+        }
+
+        private void lblsearchform_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

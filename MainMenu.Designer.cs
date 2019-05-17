@@ -40,6 +40,7 @@
             this.projectReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bugSolutionReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lognToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.btnprojectreport = new System.Windows.Forms.Button();
             this.btnaddproject = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bugSolutionReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bugAndSolutionReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@
             this.addnewbug,
             this.addUserToolStripMenuItem,
             this.bugSolutionToolStripMenuItem,
-            this.searchFormToolStripMenuItem});
+            this.searchFormToolStripMenuItem,
+            this.bugAndSolutionReportToolStripMenuItem});
             this.administratorToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.administratorToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
@@ -87,7 +89,7 @@
             this.addNewProjectToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.addNewProjectToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewProjectToolStripMenuItem.Name = "addNewProjectToolStripMenuItem";
-            this.addNewProjectToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
+            this.addNewProjectToolStripMenuItem.Size = new System.Drawing.Size(478, 42);
             this.addNewProjectToolStripMenuItem.Text = "Add New Project";
             this.addNewProjectToolStripMenuItem.Click += new System.EventHandler(this.addNewProjectToolStripMenuItem_Click);
             // 
@@ -96,7 +98,7 @@
             this.addnewbug.BackColor = System.Drawing.Color.SteelBlue;
             this.addnewbug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addnewbug.Name = "addnewbug";
-            this.addnewbug.Size = new System.Drawing.Size(360, 42);
+            this.addnewbug.Size = new System.Drawing.Size(478, 42);
             this.addnewbug.Text = "Add New Bugs";
             this.addnewbug.Click += new System.EventHandler(this.addNewBugsToolStripMenuItem_Click);
             // 
@@ -105,21 +107,21 @@
             this.addUserToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
             this.addUserToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(478, 42);
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
             // bugSolutionToolStripMenuItem
             // 
             this.bugSolutionToolStripMenuItem.Name = "bugSolutionToolStripMenuItem";
-            this.bugSolutionToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
+            this.bugSolutionToolStripMenuItem.Size = new System.Drawing.Size(478, 42);
             this.bugSolutionToolStripMenuItem.Text = "Bug Solution";
             this.bugSolutionToolStripMenuItem.Click += new System.EventHandler(this.bugSolutionToolStripMenuItem_Click);
             // 
             // searchFormToolStripMenuItem
             // 
             this.searchFormToolStripMenuItem.Name = "searchFormToolStripMenuItem";
-            this.searchFormToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
+            this.searchFormToolStripMenuItem.Size = new System.Drawing.Size(478, 42);
             this.searchFormToolStripMenuItem.Text = "Search Form";
             this.searchFormToolStripMenuItem.Click += new System.EventHandler(this.searchFormToolStripMenuItem_Click);
             // 
@@ -164,6 +166,13 @@
             this.usersReportsToolStripMenuItem.Text = "Users Reports";
             this.usersReportsToolStripMenuItem.Click += new System.EventHandler(this.usersReportsToolStripMenuItem_Click);
             // 
+            // bugSolutionReportToolStripMenuItem
+            // 
+            this.bugSolutionReportToolStripMenuItem.Name = "bugSolutionReportToolStripMenuItem";
+            this.bugSolutionReportToolStripMenuItem.Size = new System.Drawing.Size(411, 42);
+            this.bugSolutionReportToolStripMenuItem.Text = "Bug Solution Report";
+            this.bugSolutionReportToolStripMenuItem.Click += new System.EventHandler(this.bugSolutionReportToolStripMenuItem_Click);
+            // 
             // aboutUsToolStripMenuItem
             // 
             this.aboutUsToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
@@ -174,13 +183,14 @@
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(98, 41);
             this.aboutUsToolStripMenuItem.Text = "Help";
+            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // aboutUsToolStripMenuItem1
             // 
             this.aboutUsToolStripMenuItem1.BackColor = System.Drawing.Color.SteelBlue;
             this.aboutUsToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aboutUsToolStripMenuItem1.Name = "aboutUsToolStripMenuItem1";
-            this.aboutUsToolStripMenuItem1.Size = new System.Drawing.Size(252, 42);
+            this.aboutUsToolStripMenuItem1.Size = new System.Drawing.Size(237, 42);
             this.aboutUsToolStripMenuItem1.Text = "AboutUs";
             this.aboutUsToolStripMenuItem1.Click += new System.EventHandler(this.aboutUsToolStripMenuItem1_Click);
             // 
@@ -319,12 +329,12 @@
             this.panel1.Size = new System.Drawing.Size(1162, 487);
             this.panel1.TabIndex = 10;
             // 
-            // bugSolutionReportToolStripMenuItem
+            // bugAndSolutionReportToolStripMenuItem
             // 
-            this.bugSolutionReportToolStripMenuItem.Name = "bugSolutionReportToolStripMenuItem";
-            this.bugSolutionReportToolStripMenuItem.Size = new System.Drawing.Size(411, 42);
-            this.bugSolutionReportToolStripMenuItem.Text = "Bug Solution Report";
-            this.bugSolutionReportToolStripMenuItem.Click += new System.EventHandler(this.bugSolutionReportToolStripMenuItem_Click);
+            this.bugAndSolutionReportToolStripMenuItem.Name = "bugAndSolutionReportToolStripMenuItem";
+            this.bugAndSolutionReportToolStripMenuItem.Size = new System.Drawing.Size(478, 42);
+            this.bugAndSolutionReportToolStripMenuItem.Text = "Bug and Solution Report";
+            this.bugAndSolutionReportToolStripMenuItem.Click += new System.EventHandler(this.bugAndSolutionReportToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -378,5 +388,6 @@
         public System.Windows.Forms.Button btnaddproject;
         public System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bugSolutionReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bugAndSolutionReportToolStripMenuItem;
     }
 }

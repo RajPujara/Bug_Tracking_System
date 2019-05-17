@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Bug_Trakking_System
 {
-    public partial class projectreport : Form
+    public partial class projectreport : Form 
     {
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-ADDN5I4;Initial Catalog=project;Integrated Security=true;");
         public projectreport()
@@ -24,7 +24,7 @@ namespace Bug_Trakking_System
             SqlDataAdapter adt;
             conn.Open();
             DataTable dt = new DataTable();
-            adt = new SqlDataAdapter("SELECT * FROM bug", conn);
+            adt = new SqlDataAdapter("SELECT * FROM project_table", conn);
             adt.Fill(dt);
             datagridviewprojectreport.DataSource = dt;
             conn.Close();

@@ -32,16 +32,11 @@ namespace Bug_Trakking_System
         }
         public void clearbox()
         {
-            //txtfullname.Text = "";
-            //cmbrole.Text = "";
-            //txtusername.Text = "";
-            //txtpassword.Text = "";
-            //txtregistrationconformpassword.Text = "";
-            //txtuserregistrationmobile.Text = "";
-            //txtuserregistrationemail.Text = "";
-            //txtuserregistrationdob.Text = "";
-            //txtuserregistrationaddress.Text = "";
-            //txtfullname.Text = "";
+            txtfullname.Text = "";
+            txtpassword.Text = "";
+            txtusername.Text = "";
+            txtconformpassword.Text = "";
+            cmbrole.Text = "";
 
         }
         private void btnuserregistrationreset_Click(object sender, EventArgs e)
@@ -49,19 +44,50 @@ namespace Bug_Trakking_System
             clearbox();
         }
 
+        public bool isvalid()
+        {
+            if (txtfullname.Text==""|| txtusername.Text==""||txtpassword.Text==""||txtconformpassword.Text=="")
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void btnuserregistrationsubmit_Click(object sender, EventArgs e)
         {
+            if (isvalid() == true)
+            {
+                AddUser();
+            }
+            else
+            {
+                MessageBox.Show( "Please fill the form!!");
+            }
+        }
 
+        private void AddUser()
+        {
+            if (txtpassword.Text == txtconformpassword.Text)
+            {
                 int res = uc.manageusers(0, txtfullname.Text, txtusername.Text, txtpassword.Text, cmbrole.Text, 1);
-                if (res>0)
+                if (res > 0)
                 {
-                
+
                     MessageBox.Show("New user added successfully");
                 }
                 else
                 {
                     MessageBox.Show("Error");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Password didn't match");
+            }
+
         }
 
         private void txtuserregistrationname_TextChanged(object sender, EventArgs e)
@@ -85,18 +111,13 @@ namespace Bug_Trakking_System
 
         }
 
-        //public bool isemailvalid()
-        //{
-        //    Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
-        //    bool isValid = regex.IsMatch(txtuserregistrationemail.Text.Trim());
-        //    return isValid;
-        //}
+        
 
         private void btnadd_Click(object sender, EventArgs e)
         {
 
         }
-        // add new class
+        
 
 
 
@@ -155,6 +176,8 @@ namespace Bug_Trakking_System
         {
             
         }
+
+        
     }
 }
 

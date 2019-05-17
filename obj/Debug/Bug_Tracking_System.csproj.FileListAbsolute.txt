@@ -27,3 +27,4 @@ D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\WinFormsSyntaxHighli
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\bin\Debug\WinFormsSyntaxHighlighter.pdb
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.addnewbug.resources
 D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Bug_Solution_Report.resources
+D:\DOT NET PROJECT\ASSIGNMENT\Bug_Tracking_System\obj\Debug\Bug_Trakking_System.Bug_Entry_User_Report.resources

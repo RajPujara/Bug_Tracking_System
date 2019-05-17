@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.datagridviewbugreport = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewbugreport)).BeginInit();
@@ -48,11 +48,11 @@
             // 
             // datagridviewbugreport
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
-            this.datagridviewbugreport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Red;
+            this.datagridviewbugreport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.datagridviewbugreport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridviewbugreport.Location = new System.Drawing.Point(2, 76);
             this.datagridviewbugreport.Name = "datagridviewbugreport";
@@ -66,7 +66,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(717, 545);
+            this.ClientSize = new System.Drawing.Size(1319, 641);
             this.Controls.Add(this.datagridviewbugreport);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;

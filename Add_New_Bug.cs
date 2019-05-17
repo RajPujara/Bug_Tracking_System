@@ -21,6 +21,8 @@ namespace Bug_Trakking_System
 
         ManageBugClass bc = new ManageBugClass();
         ProjectClass pc = new ProjectClass();
+        UserClass uc = new UserClass();
+        
         public addnewbug()
         {
             InitializeComponent();
@@ -28,6 +30,9 @@ namespace Bug_Trakking_System
             comboBox1.DisplayMember = "project_title";
             comboBox1.ValueMember = "project_id";
             comboBox1.SelectedIndex = -1;
+            cmbidentifyby.DataSource = uc.getallusers();
+            cmbidentifyby.DisplayMember = "FullName";
+            cmbidentifyby.SelectedIndex = -1;
         }
 
         private void addnewbug_Load(object sender, EventArgs e)
@@ -59,7 +64,7 @@ namespace Bug_Trakking_System
             int res = bc.managebug(0, datetime.Text, Int32.Parse(comboBox1.SelectedValue.ToString()), txtbugname.Text, txtbugclass.Text, txtbugmethod.Text, txtcode.Text, textBox1.Text, txtlinenumber.Text, cmbidentifyby.Text, photo, 1);
             if(res>0)
             {
-                MessageBox.Show("Success");
+                MessageBox.Show("Bug Added Successfully");
             }
             else
             {
@@ -81,10 +86,22 @@ namespace Bug_Trakking_System
 
 
         }
+        public void clearbox()
+        {
+            txttitle.Text = "";
+            txtbugmethod.Text = "";
+            txtbugclass.Text = "";
+            txtbugname.Text = "";
+            txtlinenumber.Text = "";
+            datetime.Text = "";
+            cmbidentifyby.Text = "";
+            txtcode.Text = "";
 
+
+        }
         private void btnresetbug_Click(object sender, EventArgs e)
         {
-            //clearbox();
+            clearbox();
         }
 
         private void btnbugsnapshot_Click(object sender, EventArgs e)
@@ -99,7 +116,20 @@ namespace Bug_Trakking_System
 
         private void btnbrowse_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                picerror.Image = new Bitmap(open.FileName);
+
+            }
+
+        }
+
+        private void txtcode_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

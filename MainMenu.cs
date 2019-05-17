@@ -75,8 +75,12 @@ namespace Bug_Trakking_System
 
         private void aboutUsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            aboutus about = new aboutus();
-            about.Show();
+            //aboutus about = new aboutus();
+            //about.Show();
+            System.Diagnostics.Process.Start("D:\\DOT NET PROJECT\\ASSIGNMENT\\Bug_Tracking_System\\AboutUs.pdf");
+        {
+
+        }
         }
 
         private void gitHubmenu_Click(object sender, EventArgs e)
@@ -95,6 +99,17 @@ namespace Bug_Trakking_System
         {
             Bug_Solution_Report bsr = new Bug_Solution_Report();
             bsr.Show();
+        }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bugAndSolutionReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bug_Entry_User_Report beur = new Bug_Entry_User_Report();
+            beur.Show();
         }
     }
 }

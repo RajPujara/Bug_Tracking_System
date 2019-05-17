@@ -63,7 +63,7 @@
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(467, 9);
+            this.label1.Location = new System.Drawing.Point(470, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(378, 64);
             this.label1.TabIndex = 0;
@@ -74,7 +74,7 @@
             // 
             this.lbladdnewbugtitle.AutoSize = true;
             this.lbladdnewbugtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdnewbugtitle.Location = new System.Drawing.Point(32, 108);
+            this.lbladdnewbugtitle.Location = new System.Drawing.Point(34, 147);
             this.lbladdnewbugtitle.Name = "lbladdnewbugtitle";
             this.lbladdnewbugtitle.Size = new System.Drawing.Size(66, 29);
             this.lbladdnewbugtitle.TabIndex = 1;
@@ -83,10 +83,10 @@
             // txttitle
             // 
             this.txttitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttitle.Location = new System.Drawing.Point(278, 108);
+            this.txttitle.Location = new System.Drawing.Point(280, 147);
             this.txttitle.Name = "txttitle";
             this.txttitle.Size = new System.Drawing.Size(222, 32);
-            this.txttitle.TabIndex = 2;
+            this.txttitle.TabIndex = 3;
             // 
             // btnresetbug
             // 
@@ -96,7 +96,7 @@
             this.btnresetbug.Location = new System.Drawing.Point(400, 551);
             this.btnresetbug.Name = "btnresetbug";
             this.btnresetbug.Size = new System.Drawing.Size(120, 53);
-            this.btnresetbug.TabIndex = 7;
+            this.btnresetbug.TabIndex = 15;
             this.btnresetbug.Text = "Reset";
             this.btnresetbug.UseVisualStyleBackColor = false;
             this.btnresetbug.Click += new System.EventHandler(this.btnresetbug_Click);
@@ -105,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 237);
+            this.label2.Location = new System.Drawing.Point(34, 276);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 1;
@@ -114,16 +114,16 @@
             // txtbugclass
             // 
             this.txtbugclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbugclass.Location = new System.Drawing.Point(278, 237);
+            this.txtbugclass.Location = new System.Drawing.Point(280, 276);
             this.txtbugclass.Name = "txtbugclass";
             this.txtbugclass.Size = new System.Drawing.Size(222, 32);
-            this.txtbugclass.TabIndex = 2;
+            this.txtbugclass.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 173);
+            this.label4.Location = new System.Drawing.Point(34, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 29);
             this.label4.TabIndex = 1;
@@ -132,16 +132,16 @@
             // txtbugmethod
             // 
             this.txtbugmethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbugmethod.Location = new System.Drawing.Point(278, 172);
+            this.txtbugmethod.Location = new System.Drawing.Point(280, 211);
             this.txtbugmethod.Name = "txtbugmethod";
             this.txtbugmethod.Size = new System.Drawing.Size(222, 32);
-            this.txtbugmethod.TabIndex = 2;
+            this.txtbugmethod.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(32, 309);
+            this.label5.Location = new System.Drawing.Point(34, 348);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 29);
             this.label5.TabIndex = 1;
@@ -150,16 +150,16 @@
             // datetime
             // 
             this.datetime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetime.Location = new System.Drawing.Point(278, 312);
+            this.datetime.Location = new System.Drawing.Point(280, 351);
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(222, 26);
-            this.datetime.TabIndex = 10;
+            this.datetime.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 372);
+            this.label3.Location = new System.Drawing.Point(34, 411);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 29);
             this.label3.TabIndex = 1;
@@ -168,10 +168,10 @@
             // txtlinenumber
             // 
             this.txtlinenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlinenumber.Location = new System.Drawing.Point(278, 372);
+            this.txtlinenumber.Location = new System.Drawing.Point(280, 411);
             this.txtlinenumber.Name = "txtlinenumber";
             this.txtlinenumber.Size = new System.Drawing.Size(222, 32);
-            this.txtlinenumber.TabIndex = 2;
+            this.txtlinenumber.TabIndex = 7;
             // 
             // btnsavebug
             // 
@@ -181,7 +181,7 @@
             this.btnsavebug.Location = new System.Drawing.Point(37, 551);
             this.btnsavebug.Name = "btnsavebug";
             this.btnsavebug.Size = new System.Drawing.Size(181, 53);
-            this.btnsavebug.TabIndex = 7;
+            this.btnsavebug.TabIndex = 14;
             this.btnsavebug.Text = "SaveBug";
             this.btnsavebug.UseVisualStyleBackColor = false;
             this.btnsavebug.Click += new System.EventHandler(this.btnsavebug_Click);
@@ -190,7 +190,7 @@
             // 
             this.lblbugname.AutoSize = true;
             this.lblbugname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbugname.Location = new System.Drawing.Point(32, 437);
+            this.lblbugname.Location = new System.Drawing.Point(34, 476);
             this.lblbugname.Name = "lblbugname";
             this.lblbugname.Size = new System.Drawing.Size(135, 29);
             this.lblbugname.TabIndex = 1;
@@ -199,10 +199,10 @@
             // txtbugname
             // 
             this.txtbugname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbugname.Location = new System.Drawing.Point(278, 437);
+            this.txtbugname.Location = new System.Drawing.Point(280, 476);
             this.txtbugname.Name = "txtbugname";
             this.txtbugname.Size = new System.Drawing.Size(222, 32);
-            this.txtbugname.TabIndex = 2;
+            this.txtbugname.TabIndex = 8;
             // 
             // label6
             // 
@@ -220,7 +220,7 @@
             this.textBox1.Location = new System.Drawing.Point(969, 108);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(297, 32);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 9;
             // 
             // lblidentifyby
             // 
@@ -238,7 +238,7 @@
             this.cmbidentifyby.Location = new System.Drawing.Point(969, 187);
             this.cmbidentifyby.Name = "cmbidentifyby";
             this.cmbidentifyby.Size = new System.Drawing.Size(297, 28);
-            this.cmbidentifyby.TabIndex = 12;
+            this.cmbidentifyby.TabIndex = 10;
             // 
             // label7
             // 
@@ -252,13 +252,14 @@
             // 
             // txtcode
             // 
-            this.txtcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtcode.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtcode.BackColor = System.Drawing.Color.Yellow;
+            this.txtcode.ForeColor = System.Drawing.Color.White;
             this.txtcode.Location = new System.Drawing.Point(969, 274);
             this.txtcode.Multiline = true;
             this.txtcode.Name = "txtcode";
             this.txtcode.Size = new System.Drawing.Size(297, 139);
-            this.txtcode.TabIndex = 14;
+            this.txtcode.TabIndex = 11;
+            this.txtcode.TextChanged += new System.EventHandler(this.txtcode_TextChanged);
             // 
             // label8
             // 
@@ -273,7 +274,7 @@
             // picerror
             // 
             this.picerror.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.picerror.Location = new System.Drawing.Point(969, 491);
+            this.picerror.Location = new System.Drawing.Point(969, 493);
             this.picerror.Name = "picerror";
             this.picerror.Size = new System.Drawing.Size(297, 181);
             this.picerror.TabIndex = 15;
@@ -286,7 +287,7 @@
             this.btnbrowse.Location = new System.Drawing.Point(742, 567);
             this.btnbrowse.Name = "btnbrowse";
             this.btnbrowse.Size = new System.Drawing.Size(146, 55);
-            this.btnbrowse.TabIndex = 16;
+            this.btnbrowse.TabIndex = 12;
             this.btnbrowse.Text = "Browse";
             this.btnbrowse.UseVisualStyleBackColor = false;
             this.btnbrowse.Click += new System.EventHandler(this.btnbrowse_Click);
@@ -295,7 +296,7 @@
             // 
             this.lblproject.AutoSize = true;
             this.lblproject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblproject.Location = new System.Drawing.Point(22, 70);
+            this.lblproject.Location = new System.Drawing.Point(24, 109);
             this.lblproject.Name = "lblproject";
             this.lblproject.Size = new System.Drawing.Size(96, 29);
             this.lblproject.TabIndex = 1;
@@ -304,10 +305,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(278, 58);
+            this.comboBox1.Location = new System.Drawing.Point(280, 97);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 28);
-            this.comboBox1.TabIndex = 17;
+            this.comboBox1.Size = new System.Drawing.Size(222, 28);
+            this.comboBox1.TabIndex = 2;
             // 
             // addnewbug
             // 

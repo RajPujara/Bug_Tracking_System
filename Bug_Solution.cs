@@ -9,16 +9,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccessLayer;
 
 namespace Bug_Trakking_System
 {
-    
+   
     public partial class Bug_Solution : Form
     {
+        Bug_SolutionClass bc = new Bug_SolutionClass();
+        ProjectClass pc = new ProjectClass();
+        ManageBugClass mbc = new ManageBugClass();
+        UserClass uc = new UserClass();
         public string fileName;
         public Bug_Solution()
         {
             InitializeComponent();
+            cmbproject.DataSource = pc.getallprojects();
+            cmbproject.DisplayMember = "project_title";
+            cmbproject.ValueMember = "project_id";
+            cmbproject.SelectedIndex = -1;
+
+            cmbbug.DataSource = mbc.getallbug();
+            cmbbug.DisplayMember = "Bug";
+            cmbbug.ValueMember = "BugId";
+            cmbbug.SelectedIndex = -1;
+
+            cmbidentifyby.DataSource = uc.getallusers();
+            cmbidentifyby.DisplayMember = "FullName";
+            cmbidentifyby.SelectedIndex = -1;
+
         }
         HelperClass hc = new HelperClass();
 
@@ -83,7 +102,7 @@ namespace Bug_Trakking_System
                 }
             }
         }
-
+      
         private void lblsavenewbug_Click(object sender, EventArgs e)
         {
             MemoryStream ms = new MemoryStream();
@@ -136,6 +155,42 @@ namespace Bug_Trakking_System
         }
 
         private void btnsavebug_Click(object sender, EventArgs e)
+        {
+            MemoryStream ms = new MemoryStream();
+            picsolution.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] photo = new byte[ms.Length];
+            ms.Position = 0;
+            ms.Read(photo, 0, photo.Length);
+
+            int res = bc.managebug(0, datetime.Text, Int32.Parse(cmbproject.SelectedValue.ToString()),Int32.Parse(cmbbug.SelectedValue.ToString()), txtbugclass.Text, txtbugmethod.Text, txtcode.Text, textBox1.Text, txtlinenumber.Text, cmbidentifyby.Text, photo, 1);
+            if (res > 0)
+            {
+                MessageBox.Show("Bug Solution Added Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Eror");
+            }
+        }
+        public void clearbox()
+        {
+            txttitle.Text = "";
+            txtbugmethod.Text = "";
+            txtbugclass.Text = "";
+            cmbbug.Text = "";
+            txtlinenumber.Text = "";
+            datetime.Text = "";
+            cmbidentifyby.Text = "";
+            txtcode.Text = "";
+            
+
+        }
+        private void btnresetbug_Click(object sender, EventArgs e)
+        {
+            clearbox();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }

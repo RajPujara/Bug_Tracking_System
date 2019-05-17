@@ -39,12 +39,27 @@ namespace BugTrakkingSystem
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Login();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Invalid username or password");
+            }
+            
+        }
+
+        private void Login()
+        {
             string role = uc.role(txtusername.Text, txtpassword.Text);
             if (role == "admin")
             {
                 this.Hide();
                 MainMenu mm = new MainMenu();
                 mm.Show();
+                //MessageBox.Show("Login Successful");
             }
             else if (role == "tester")
             {
@@ -70,9 +85,8 @@ namespace BugTrakkingSystem
             }
             else
             {
-                MessageBox.Show("You donot have permission");
+                MessageBox.Show("Invalid username or password");
             }
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

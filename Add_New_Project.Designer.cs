@@ -35,8 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.richtxtboxaddnewprojectdescription = new System.Windows.Forms.RichTextBox();
             this.btnadprojectsubmit = new System.Windows.Forms.Button();
-            this.btnaddprojectupdate = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
             this.btnreset = new System.Windows.Forms.Button();
             this.lblstartdate = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +53,7 @@
             this.label1.Size = new System.Drawing.Size(458, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add New Project";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblprojecttitle
             // 
@@ -119,38 +118,12 @@
             this.btnadprojectsubmit.UseVisualStyleBackColor = false;
             this.btnadprojectsubmit.Click += new System.EventHandler(this.btnadprojectsubmit_Click);
             // 
-            // btnaddprojectupdate
-            // 
-            this.btnaddprojectupdate.BackColor = System.Drawing.Color.Teal;
-            this.btnaddprojectupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddprojectupdate.ForeColor = System.Drawing.Color.White;
-            this.btnaddprojectupdate.Location = new System.Drawing.Point(533, 546);
-            this.btnaddprojectupdate.Name = "btnaddprojectupdate";
-            this.btnaddprojectupdate.Size = new System.Drawing.Size(114, 43);
-            this.btnaddprojectupdate.TabIndex = 6;
-            this.btnaddprojectupdate.Text = "Update";
-            this.btnaddprojectupdate.UseVisualStyleBackColor = false;
-            this.btnaddprojectupdate.Click += new System.EventHandler(this.btnaddprojectreset_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.ForeColor = System.Drawing.Color.White;
-            this.btndelete.Location = new System.Drawing.Point(815, 546);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(117, 43);
-            this.btndelete.TabIndex = 6;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = false;
-            this.btndelete.Click += new System.EventHandler(this.btnadprojectsubmit_Click);
-            // 
             // btnreset
             // 
             this.btnreset.BackColor = System.Drawing.Color.Teal;
             this.btnreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreset.ForeColor = System.Drawing.Color.White;
-            this.btnreset.Location = new System.Drawing.Point(1145, 546);
+            this.btnreset.Location = new System.Drawing.Point(805, 546);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(114, 43);
             this.btnreset.TabIndex = 6;
@@ -166,7 +139,7 @@
             this.lblstartdate.Location = new System.Drawing.Point(147, 216);
             this.lblstartdate.Name = "lblstartdate";
             this.lblstartdate.Size = new System.Drawing.Size(128, 29);
-            this.lblstartdate.TabIndex = 7;
+            this.lblstartdate.TabIndex = 1;
             this.lblstartdate.Text = "Start Date";
             // 
             // dateTimePicker1
@@ -175,7 +148,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(533, 219);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(282, 26);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // lblendate
             // 
@@ -185,7 +158,7 @@
             this.lblendate.Location = new System.Drawing.Point(147, 292);
             this.lblendate.Name = "lblendate";
             this.lblendate.Size = new System.Drawing.Size(120, 29);
-            this.lblendate.TabIndex = 7;
+            this.lblendate.TabIndex = 1;
             this.lblendate.Text = "End Date";
             // 
             // dateTimePicker2
@@ -194,7 +167,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(533, 295);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(282, 26);
-            this.dateTimePicker2.TabIndex = 8;
+            this.dateTimePicker2.TabIndex = 4;
             // 
             // addnewproject
             // 
@@ -207,8 +180,6 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblstartdate);
             this.Controls.Add(this.btnreset);
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnaddprojectupdate);
             this.Controls.Add(this.btnadprojectsubmit);
             this.Controls.Add(this.richtxtboxaddnewprojectdescription);
             this.Controls.Add(this.label5);
@@ -232,8 +203,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox richtxtboxaddnewprojectdescription;
         private System.Windows.Forms.Button btnadprojectsubmit;
-        private System.Windows.Forms.Button btnaddprojectupdate;
-        private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnreset;
         private System.Windows.Forms.Label lblstartdate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

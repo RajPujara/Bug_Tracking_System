@@ -70,6 +70,12 @@
     <Compile Include="Add_User.Designer.cs">
       <DependentUpon>Add_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bug_Entry_User_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bug_Entry_User_Report.Designer.cs">
+      <DependentUpon>Bug_Entry_User_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bug_Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <EmbeddedResource Include="Add_User.resx">
       <DependentUpon>Add_User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bug_Entry_User_Report.resx">
+      <DependentUpon>Bug_Entry_User_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bug_Report.resx">
       <DependentUpon>Bug_Report.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +186,7 @@
     <EmbeddedResource Include="User_Report.resx">
       <DependentUpon>User_Report.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AboutUs.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

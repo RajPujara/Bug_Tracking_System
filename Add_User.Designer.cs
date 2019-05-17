@@ -1,4 +1,6 @@
-﻿namespace Bug_Trakking_System
+﻿using System;
+
+namespace Bug_Trakking_System
 {
     partial class addnewuser
     {
@@ -39,10 +41,8 @@
             this.lblregistrationpassword = new System.Windows.Forms.Label();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.lblregistrationconformpassword = new System.Windows.Forms.Label();
-            this.txtregistrationconformpassword = new System.Windows.Forms.TextBox();
+            this.txtconformpassword = new System.Windows.Forms.TextBox();
             this.btnsubmit = new System.Windows.Forms.Button();
-            this.btnadd = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
             this.btnreset = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -54,7 +54,7 @@
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(524, 9);
+            this.label1.Location = new System.Drawing.Point(303, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(478, 64);
             this.label1.TabIndex = 0;
@@ -77,7 +77,7 @@
             this.txtfullname.Name = "txtfullname";
             this.txtfullname.Size = new System.Drawing.Size(340, 26);
             this.txtfullname.TabIndex = 2;
-            this.txtfullname.TextChanged += new System.EventHandler(this.txtuserregistrationname_TextChanged);
+          //  this.txtfullname.TextChanged += new System.EventHandler(this.txtuserregistrationname_TextChanged);
             // 
             // lbluserregistrationlevel
             // 
@@ -100,7 +100,7 @@
             this.cmbrole.Name = "cmbrole";
             this.cmbrole.Size = new System.Drawing.Size(340, 28);
             this.cmbrole.TabIndex = 3;
-            this.cmbrole.SelectedIndexChanged += new System.EventHandler(this.combolbluserregistrationlevel_SelectedIndexChanged);
+          //  this.cmbrole.SelectedIndexChanged += new System.EventHandler(this.combolbluserregistrationlevel_SelectedIndexChanged);
             // 
             // lblregistrationusername
             // 
@@ -136,6 +136,7 @@
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(340, 26);
             this.txtpassword.TabIndex = 5;
+          //  this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // lblregistrationconformpassword
             // 
@@ -147,19 +148,20 @@
             this.lblregistrationconformpassword.TabIndex = 1;
             this.lblregistrationconformpassword.Text = "Confirm Password";
             // 
-            // txtregistrationconformpassword
+            // txtconformpassword
             // 
-            this.txtregistrationconformpassword.Location = new System.Drawing.Point(334, 313);
-            this.txtregistrationconformpassword.Name = "txtregistrationconformpassword";
-            this.txtregistrationconformpassword.PasswordChar = '*';
-            this.txtregistrationconformpassword.Size = new System.Drawing.Size(340, 26);
-            this.txtregistrationconformpassword.TabIndex = 6;
+            this.txtconformpassword.Location = new System.Drawing.Point(334, 313);
+            this.txtconformpassword.Name = "txtconformpassword";
+            this.txtconformpassword.PasswordChar = '*';
+            this.txtconformpassword.Size = new System.Drawing.Size(340, 26);
+            this.txtconformpassword.TabIndex = 6;
+//            this.txtconformpassword.TextChanged += new System.EventHandler(this.txtconformpassword_TextChanged);
             // 
             // btnsubmit
             // 
             this.btnsubmit.BackColor = System.Drawing.Color.Orange;
             this.btnsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsubmit.Location = new System.Drawing.Point(67, 613);
+            this.btnsubmit.Location = new System.Drawing.Point(162, 441);
             this.btnsubmit.Name = "btnsubmit";
             this.btnsubmit.Size = new System.Drawing.Size(119, 56);
             this.btnsubmit.TabIndex = 11;
@@ -167,35 +169,11 @@
             this.btnsubmit.UseVisualStyleBackColor = false;
             this.btnsubmit.Click += new System.EventHandler(this.btnuserregistrationsubmit_Click);
             // 
-            // btnadd
-            // 
-            this.btnadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.Location = new System.Drawing.Point(416, 613);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(130, 56);
-            this.btnadd.TabIndex = 12;
-            this.btnadd.Text = "Update";
-            this.btnadd.UseVisualStyleBackColor = false;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.BackColor = System.Drawing.Color.Orange;
-            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.Location = new System.Drawing.Point(700, 613);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(119, 56);
-            this.btndelete.TabIndex = 13;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = false;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
             // btnreset
             // 
             this.btnreset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreset.Location = new System.Drawing.Point(1030, 613);
+            this.btnreset.Location = new System.Drawing.Point(580, 441);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(130, 56);
             this.btnreset.TabIndex = 14;
@@ -212,13 +190,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1461, 710);
+            this.ClientSize = new System.Drawing.Size(1043, 588);
             this.Controls.Add(this.btnreset);
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.cmbrole);
-            this.Controls.Add(this.txtregistrationconformpassword);
+            this.Controls.Add(this.txtconformpassword);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.lblregistrationconformpassword);
             this.Controls.Add(this.txtusername);
@@ -238,6 +214,16 @@
 
         }
 
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void txtconformpassword_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Label label1;
@@ -250,10 +236,8 @@
         private System.Windows.Forms.Label lblregistrationpassword;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label lblregistrationconformpassword;
-        private System.Windows.Forms.TextBox txtregistrationconformpassword;
+        private System.Windows.Forms.TextBox txtconformpassword;
         private System.Windows.Forms.Button btnsubmit;
-        private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnreset;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
